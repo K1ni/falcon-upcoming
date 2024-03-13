@@ -1,0 +1,418 @@
+{
+    "BoredApeYachtClub": {
+    "name": "BoredApeYachtClub",
+    "contractAddress": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+    "items": {
+      "5f668794-de88-4f56-bac4-8d82ad45fda9": {
+        "wallet": "0x2e2cbE8B00BbCE81101Ed0798f03f1D4401E123d",
+        "maxFee": "1",
+        "priorityFee": "1",
+        "txCount": "1",
+        "value": "0",
+        "hex": "0xa723533e0000000000000000000000000000000000000000000000000000000000000001",
+        "rpc": "https://rpc.ankr.com/eth_goerli/20fc57c5aacc6967874a12de4ea663e235874fa0f06c924795ddd00a13817def",
+        "isHex": false,
+        "isAutoGasLimit": true,
+        "isSimulate": true,
+        "selectedFunction": "mintApe",
+        "functionInputs": {
+          "numberOfTokens": "1"
+        },
+        "name": "5f668794-de88-4f56-bac4-8d82ad45fda9",
+        "contractAddress": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d"
+      }
+    },
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "approve",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "emergencySetStartingIndexBlock",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "flipSaleState",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "numberOfTokens",
+            "type": "uint256"
+          }
+        ],
+        "name": "mintApe",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "reserveApes",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "safeTransferFrom",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes",
+            "name": "_data",
+            "type": "bytes"
+          }
+        ],
+        "name": "safeTransferFrom",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "approved",
+            "type": "bool"
+          }
+        ],
+        "name": "setApprovalForAll",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "baseURI",
+            "type": "string"
+          }
+        ],
+        "name": "setBaseURI",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "provenanceHash",
+            "type": "string"
+          }
+        ],
+        "name": "setProvenanceHash",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "revealTimeStamp",
+            "type": "uint256"
+          }
+        ],
+        "name": "setRevealTimestamp",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "setStartingIndex",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "transferFrom",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "withdraw",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ],
+    "network": {
+      "name": "Ethereum",
+      "ankr": "eth",
+      "os": "https://opensea.io/assets/ethereum",
+      "reservoir": "",
+      "scanapi": "https://api.etherscan.io/",
+      "scan": "https://etherscan.io/",
+      "image": "https://cdn.routescan.io/_next/image?url=https%3a%2f%2fcms-cdn.avascan.com%2fethereum_eb89906e5b.png&w=32&q=100",
+      "alt": "eth"
+    },
+    "contractOwner": "0x0000000000000000000000000000000000000000",
+    "contractName": "BoredApeYachtClub",
+    "info": {
+      "chainId": 1,
+      "id": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+      "slug": "boredapeyachtclub",
+      "createdAt": "2022-02-09T21:14:58.386Z",
+      "updatedAt": "2024-03-13T12:42:50.604Z",
+      "name": "Bored Ape Yacht Club",
+      "symbol": "BAYC",
+      "contractDeployedAt": null,
+      "image": "https://img.reservoir.tools/images/v2/mainnet/z9JRSpLYGu7%2BCZoKWtAuAA79K674Y2b4%2F48FTC1v%2BJ4rEwpjEK3D0qjUdzqyInvnSJFH5IaIgEk7pF0NEn6WqgSgbCdGL27rkoWAYjQhV2aH%2F8nBd9uVO2ymg2znWvbXJa379tKUzlm4lW4%2BFvX3Lkybz6boYKjCsVC4GCdwAv31e%2BCSMdhCyyVeL2Un9dcL75s2732P2AwlxFyItUXvXQ%3D%3D?width=250",
+      "banner": "https://img.reservoir.tools/images/v2/mainnet/z9JRSpLYGu7%2BCZoKWtAuAM1rRhySRbERY0%2B6lnhVU9Ds%2BKgl0YTWu1CsabpicYXk7sRc87%2Bv7MV0GJIisUgdCn0xh3GghmVzyiBQm04y%2FNe30W0jRiHGqRrchCJdrbOlBwksv1hh6xX%2FzMYhpUp0%2Bpimr8XIJiS3Ugzqn3RpUUJ5WYT8ZJi%2B4RpGcBaOOYnuyBDHqGBZKKYLhXt04tPHfA%3D%3D",
+      "twitterUrl": null,
+      "discordUrl": "https://discord.gg/3P5K3dzgdB",
+      "externalUrl": "http://www.boredapeyachtclub.com/",
+      "twitterUsername": "BoredApeYC",
+      "openseaVerificationStatus": "verified",
+      "magicedenVerificationStatus": "verified",
+      "description": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.",
+      "metadataDisabled": false,
+      "isSpam": false,
+      "isNsfw": false,
+      "isMinting": false,
+      "sampleImages": [
+        "https://img.reservoir.tools/images/v2/mainnet/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCbhE1FYhDNEoQKS%2FlkKp4kMW7yGBJffi9vXolUvqwlwsdXoTtGfBIaOQCsgPk9SHrzcrlEaXQ35IubvJbaR5XC%2B2r1GRQeDIexRh2DBep5ghg%3D%3D",
+        "https://img.reservoir.tools/images/v2/mainnet/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCagQU0QQCN9yqDvsLa4wymBAl886nOJ3pPNsxQRBudn2V2nNh%2BhqsSeV2qkkd%2FVULsKJVdk3oSM1NXDk5i6aRNJEm0GI0zSEbbKYLZiYCbMUA%3D%3D",
+        "https://img.reservoir.tools/images/v2/mainnet/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZn7xFKjuBBZndv%2BMcHRR4dKFjRCfX4dCcwGhYj5HPqDxubPEPEBFAN2qJIWikV%2FwY0%2Bb60ARUuUtVHuCufTvDNb3Mqe0MtV2o4QlxNVPEY8w%3D%3D",
+        "https://img.reservoir.tools/images/v2/mainnet/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYOdbMvyjTFDTll%2FhYj5ersbqJgBFcDHZ0HmjVGH%2BrateCJOB323gJdrLoFbkyqJwgz7Fo3t69WJWM3wG4rRWZajW%2Fz5TtSFa4lIYeqWLInvA%3D%3D"
+      ],
+      "tokenCount": "9998",
+      "onSaleCount": "565",
+      "primaryContract": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+      "tokenSetId": "contract:0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+      "creator": "0xaba7161a7fb69c88e16ed9f455ce62b791ee4d03",
+      "royalties": {
+        "recipient": "0xaae7ac476b117bccafe2f05f582906be44bc8ff1",
+        "breakdown": [
+          {
+            "bps": 100,
+            "recipient": "0xaae7ac476b117bccafe2f05f582906be44bc8ff1"
+          }
+        ],
+        "bps": 100
+      },
+      "allRoyalties": {
+        "custom": [
+          {
+            "bps": 100,
+            "recipient": "0xaae7ac476b117bccafe2f05f582906be44bc8ff1"
+          }
+        ],
+        "onchain": [
+          {
+            "bps": 250,
+            "recipient": "0xaae7ac476b117bccafe2f05f582906be44bc8ff1"
+          }
+        ],
+        "opensea": [
+          {
+            "bps": 100,
+            "required": false,
+            "recipient": "0xa858ddc0445d8131dac4d1de01f834ffcba52ef1"
+          }
+        ]
+      },
+      "floorAsk": {
+        "id": "0xebde832bf069b835c2c01f6cee803c02ebd2af94513240d2a54c9509d4f2dd4e",
+        "sourceDomain": "blur.io",
+        "price": {
+          "currency": {
+            "contract": "0x0000000000000000000000000000000000000000",
+            "name": "Ether",
+            "symbol": "ETH",
+            "decimals": 18
+          },
+          "amount": {
+            "raw": "14580000000000000000",
+            "decimal": 14.58,
+            "usd": 58009.23854,
+            "native": 14.58
+          }
+        },
+        "maker": "0x70ec29bb2d63cc4fa10dface1fbe1c3a125c8598",
+        "validFrom": 1710333770,
+        "validUntil": 0,
+        "token": {
+          "contract": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+          "tokenId": "8695",
+          "name": null,
+          "image": "https://img.reservoir.tools/images/v2/mainnet/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZq%2FhRh28mNu9nGqSbXLivNAzeb2Hh3iArg%2FASM2mHJIj8P4YkC9aoZVNt5rZZt7cNMhL0PJpmLhvm224ZdbHFvjot9UDUssbKWk4jeYALh8fqCCxFP6TFrpSmY7StlRAg%3D?width=512"
+        }
+      },
+      "topBid": {
+        "id": "0x5891ce1d14abf5c9159fb68424c40e8d61cc5d765693cfc351082b36bccdddda",
+        "sourceDomain": "blur.io",
+        "price": {
+          "currency": {
+            "contract": "0x0000000000a39bb272e79075ade125fd351887ac",
+            "name": "Blur ETH",
+            "symbol": "BETH",
+            "decimals": 18
+          },
+          "amount": {
+            "raw": "14320000000000000000",
+            "decimal": 14.32,
+            "usd": 56875.5266,
+            "native": 14.32
+          },
+          "netAmount": {
+            "raw": "14248400000000000000",
+            "decimal": 14.2484,
+            "usd": 56591.14897,
+            "native": 14.2484
+          }
+        },
+        "maker": "0x0000000000a39bb272e79075ade125fd351887ac",
+        "validFrom": 1710333801,
+        "validUntil": 0
+      },
+      "rank": {
+        "1day": 1,
+        "7day": 1,
+        "30day": 3,
+        "allTime": 3
+      },
+      "volume": {
+        "1day": 3245.75656,
+        "7day": 9860.34593,
+        "30day": 31883.35812,
+        "allTime": 1594750.66056
+      },
+      "volumeChange": {
+        "1day": 2.7313072827678595,
+        "7day": 1.8977091311935907,
+        "30day": 1.9080686112937202
+      },
+      "floorSale": {
+        "1day": 12.12,
+        "7day": 17,
+        "30day": 22.52
+      },
+      "floorSaleChange": {
+        "1day": 1.202970297029703,
+        "7day": 0.8576470588235294,
+        "30day": 0.6474245115452931
+      },
+      "collectionBidSupported": true,
+      "ownerCount": 5307,
+      "contractKind": "erc721",
+      "mintedTimestamp": null,
+      "mintStages": []
+    },
+    "monitor": {
+      "mode": "flipstate",
+      "from": "0x0000000000000000000000000000000000000000",
+      "to": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+      "hex": "0x34918dfd",
+      "isHex": false,
+      "isPending": false,
+      "selectedFunction": "flipSaleState",
+      "functionInputs": {}
+    }
+
+  }}
