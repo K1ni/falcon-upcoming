@@ -2,15 +2,10 @@
     "time":"1710335953-1710336953",
     "name": "BoredApeYachtClub",
     "contractAddress": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
-    "items": {
-      "5f668794-de88-4f56-bac4-8d82ad45fda9": {
-        "wallet": "0x2e2cbE8B00BbCE81101Ed0798f03f1D4401E123d",
-        "maxFee": "1",
-        "priorityFee": "1",
+    "task": {
         "txCount": "1",
         "value": "0",
         "hex": "0xa723533e0000000000000000000000000000000000000000000000000000000000000001",
-        "rpc": "https://rpc.ankr.com/eth_goerli/20fc57c5aacc6967874a12de4ea663e235874fa0f06c924795ddd00a13817def",
         "isHex": false,
         "isAutoGasLimit": true,
         "isSimulate": true,
@@ -20,7 +15,7 @@
         },
         "name": "5f668794-de88-4f56-bac4-8d82ad45fda9",
         "contractAddress": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d"
-      }
+      
     },
     "abi": [
       {
