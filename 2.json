@@ -580,7 +580,8 @@
     "scanapi": "https://api.polygonscan.com/",
     "scan": "https://polygonscan.com/",
     "image": "https://icons.llamao.fi/icons/chains/rsz_polygon.jpg",
-    "alt": "pol"
+    "alt": "pol",
+    "token": "https://icons.llamao.fi/icons/chains/rsz_polygon.jpg"
   },
   "contractOwner": "0x008ebd3451919E4257193553Cea3d28634242116",
   "contractName": "Prometheus Chestplate",

@@ -44,11 +44,13 @@
       "scanapi": "https://api.blastscan.io/",
       "scan": "https://blastscan.io/",
       "image": "https://cdn.routescan.io/_next/image?url=https%3A%2F%2Fcms-cdn.avascan.com%2Fcms2%2Fblast.dead36673539.png&w=32&q=100",
-      "alt": "bst"
+      "alt": "bst",
+      "token": "https://cdn.routescan.io/_next/image?url=https%3a%2f%2fcms-cdn.avascan.com%2fethereum_eb89906e5b.png&w=32&q=100"
     },
     "contractName": "Wen OG Pass",
     "contractOwner": "0xbaFE2F03805148376baCb417f34773BaD138E683",
     "info": {
+      
       "chainId": 81457,
       "id": "0x64e38aa7515826bcc00cece38f57ca21b1495710",
       "slug": null,
@@ -57,7 +59,7 @@
       "name": "Wen OG Pass",
       "symbol": null,
       "contractDeployedAt": null,
-      "image": null,
+      "image": "https://storage.nfte.ai/ebizprod/collection/image/202403012158317a757f5ad5cb41fabe4aa913780d08f8.png?x-oss-process=image/resize,m_fill,w_300,h_300",
       "banner": null,
       "twitterUrl": null,
       "discordUrl": null,

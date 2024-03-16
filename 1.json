@@ -243,7 +243,9 @@
       "scanapi": "https://api.etherscan.io/",
       "scan": "https://etherscan.io/",
       "image": "https://cdn.routescan.io/_next/image?url=https%3a%2f%2fcms-cdn.avascan.com%2fethereum_eb89906e5b.png&w=32&q=100",
-      "alt": "eth"
+      "alt": "eth",
+      "token": "https://cdn.routescan.io/_next/image?url=https%3a%2f%2fcms-cdn.avascan.com%2fethereum_eb89906e5b.png&w=32&q=100"
+
     },
     "contractOwner": "0x0000000000000000000000000000000000000000",
     "contractName": "BoredApeYachtClub",
