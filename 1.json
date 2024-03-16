@@ -4,7 +4,7 @@
     "contractAddress": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
     "task": {
         "txCount": "1",
-        "value": "0",
+        "value": "1",
         "hex": "0xa723533e0000000000000000000000000000000000000000000000000000000000000001",
         "isHex": false,
         "isAutoGasLimit": true,
