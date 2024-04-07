@@ -1,6 +1,6 @@
 {
     "name": "W3GF (Waitlist)",
-    "timestamp":1712440800,
+    "timestamp":1712520300,
     "contractAddress": "0x342d1cECEfb87979EeB3077A36D1628beC38e1E2",
     "task": {
         "txCount": "1",
@@ -668,6 +668,6 @@
     },
     "monitor": {
         "mode": "timestamp",
-        "timestamp": "1712440800"
+        "timestamp": "1712520300"
       }
   }
