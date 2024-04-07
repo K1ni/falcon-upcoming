@@ -16,6 +16,7 @@
           "timestamp": "0",
           "signature": "0x"
         },
+        "gasLimit": "180000",
         "contractAddress": "0x342d1cECEfb87979EeB3077A36D1628beC38e1E2"
       
     },
