@@ -1,0 +1,664 @@
+{
+    "name": "based block",
+    "timestamp":1712512800,
+    "contractAddress": "0x00005EA00Ac477B1030CE78506496e8C2dE24bf5",
+    "task": {
+
+        "txCount": "1",
+        "value": "0.069",
+        "hex": "0x161ac21f000000000000000000000000c00ff56e8c9014b80b3c10eb0f3c5c29be5f3a5b0000000000000000000000000000a26b00c1f0df003000390027140000faa7190000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a",
+        "isHex": false,
+        "isAutoGasLimit": false,
+        "isSimulate": false,
+        "selectedFunction": "mintPublic",
+        "functionInputs": {
+          "nftContract": "0xc00ff56e8c9014b80b3c10eb0f3c5c29be5f3a5b",
+          "feeRecipient": "0x0000a26b00c1f0df003000390027140000faa719",
+          "minterIfNotPayer": "0x0000000000000000000000000000000000000000",
+          "quantity": "10"
+        },
+        "contractAddress": "0x00005EA00Ac477B1030CE78506496e8C2dE24bf5",
+        "gasLimit": "140000"
+      
+    },
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "nftContract",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "feeRecipient",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "minterIfNotPayer",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "quantity",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "mintPrice",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxTotalMintableByWallet",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "startTime",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "endTime",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "dropStageIndex",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxTokenSupplyForStage",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "feeBps",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bool",
+                "name": "restrictFeeRecipients",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct MintParams",
+            "name": "mintParams",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes32[]",
+            "name": "proof",
+            "type": "bytes32[]"
+          }
+        ],
+        "name": "mintAllowList",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "nftContract",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "feeRecipient",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "minterIfNotPayer",
+            "type": "address"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "allowedNftToken",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256[]",
+                "name": "allowedNftTokenIds",
+                "type": "uint256[]"
+              }
+            ],
+            "internalType": "struct TokenGatedMintParams",
+            "name": "mintParams",
+            "type": "tuple"
+          }
+        ],
+        "name": "mintAllowedTokenHolder",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "nftContract",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "feeRecipient",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "minterIfNotPayer",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "quantity",
+            "type": "uint256"
+          }
+        ],
+        "name": "mintPublic",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "nftContract",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "feeRecipient",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "minterIfNotPayer",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "quantity",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "mintPrice",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxTotalMintableByWallet",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "startTime",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "endTime",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "dropStageIndex",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxTokenSupplyForStage",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "feeBps",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bool",
+                "name": "restrictFeeRecipients",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct MintParams",
+            "name": "mintParams",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "salt",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "name": "mintSigned",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "bytes32",
+                "name": "merkleRoot",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "string[]",
+                "name": "publicKeyURIs",
+                "type": "string[]"
+              },
+              {
+                "internalType": "string",
+                "name": "allowListURI",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct AllowListData",
+            "name": "allowListData",
+            "type": "tuple"
+          }
+        ],
+        "name": "updateAllowList",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "feeRecipient",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "allowed",
+            "type": "bool"
+          }
+        ],
+        "name": "updateAllowedFeeRecipient",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_payoutAddress",
+            "type": "address"
+          }
+        ],
+        "name": "updateCreatorPayoutAddress",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "dropURI",
+            "type": "string"
+          }
+        ],
+        "name": "updateDropURI",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "payer",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "allowed",
+            "type": "bool"
+          }
+        ],
+        "name": "updatePayer",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint80",
+                "name": "mintPrice",
+                "type": "uint80"
+              },
+              {
+                "internalType": "uint48",
+                "name": "startTime",
+                "type": "uint48"
+              },
+              {
+                "internalType": "uint48",
+                "name": "endTime",
+                "type": "uint48"
+              },
+              {
+                "internalType": "uint16",
+                "name": "maxTotalMintableByWallet",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "feeBps",
+                "type": "uint16"
+              },
+              {
+                "internalType": "bool",
+                "name": "restrictFeeRecipients",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct PublicDrop",
+            "name": "publicDrop",
+            "type": "tuple"
+          }
+        ],
+        "name": "updatePublicDrop",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "signer",
+            "type": "address"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint80",
+                "name": "minMintPrice",
+                "type": "uint80"
+              },
+              {
+                "internalType": "uint24",
+                "name": "maxMaxTotalMintableByWallet",
+                "type": "uint24"
+              },
+              {
+                "internalType": "uint40",
+                "name": "minStartTime",
+                "type": "uint40"
+              },
+              {
+                "internalType": "uint40",
+                "name": "maxEndTime",
+                "type": "uint40"
+              },
+              {
+                "internalType": "uint40",
+                "name": "maxMaxTokenSupplyForStage",
+                "type": "uint40"
+              },
+              {
+                "internalType": "uint16",
+                "name": "minFeeBps",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "maxFeeBps",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct SignedMintValidationParams",
+            "name": "signedMintValidationParams",
+            "type": "tuple"
+          }
+        ],
+        "name": "updateSignedMintValidationParams",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "allowedNftToken",
+            "type": "address"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint80",
+                "name": "mintPrice",
+                "type": "uint80"
+              },
+              {
+                "internalType": "uint16",
+                "name": "maxTotalMintableByWallet",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint48",
+                "name": "startTime",
+                "type": "uint48"
+              },
+              {
+                "internalType": "uint48",
+                "name": "endTime",
+                "type": "uint48"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dropStageIndex",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint32",
+                "name": "maxTokenSupplyForStage",
+                "type": "uint32"
+              },
+              {
+                "internalType": "uint16",
+                "name": "feeBps",
+                "type": "uint16"
+              },
+              {
+                "internalType": "bool",
+                "name": "restrictFeeRecipients",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct TokenGatedDropStage",
+            "name": "dropStage",
+            "type": "tuple"
+          }
+        ],
+        "name": "updateTokenGatedDrop",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ],
+    "network": {
+      "name": "Base",
+      "ankr": "base",
+      "os": "https://opensea.io/assets/base",
+      "reservoir": "-base",
+      "scanapi": "https://api.basescan.org/",
+      "scan": "https://basescan.org/",
+      "image": "https://cdn.routescan.io/_next/image?url=https%3A%2F%2Fcms-cdn.avascan.com%2Fcms2%2Fbase-logo-in-blue.eff264310cb2.png&w=32&q=100",
+      "alt": "base",
+      "token": "https://cdn.routescan.io/_next/image?url=https%3a%2f%2fcms-cdn.avascan.com%2fethereum_eb89906e5b.png&w=32&q=100"
+    },
+    "info": {
+        "chainId": 8453,
+        "id": "0xc00ff56e8c9014b80b3c10eb0f3c5c29be5f3a5b",
+        "slug": "basedblocks",
+        "createdAt": "2024-04-07T13:02:10.175Z",
+        "updatedAt": "2024-04-07T17:32:15.435Z",
+        "name": "Based Blocks",
+        "symbol": "BB",
+        "contractDeployedAt": "2024-04-07T13:02:03.000Z",
+        "image": "https://img.reservoir.tools/images/v2/base/z9JRSpLYGu7%2BCZoKWtAuAGdWptlhC4UVqExq%2BIguqyFaj1xjXc5xi23E3k6Df61hklQRVAk2BSCyTjY6GvUxiOfl4ULgH7vICSGlw5jWC2QmufR%2FyZdKUXRMzbAojWW4bGgHqwdv9u1Mf1chw4hvGA%3D%3D?width=250",
+        "banner": "",
+        "twitterUrl": null,
+        "discordUrl": "",
+        "externalUrl": "",
+        "twitterUsername": "whunder_eth",
+        "openseaVerificationStatus": "not_requested",
+        "magicedenVerificationStatus": null,
+        "description": "Based Blocks is a symphony of mathematics and artistry, a generative art collection that uses the power of algorithms to create a dynamic, ever-changing landscape of color and form. \n\n",
+        "metadataDisabled": false,
+        "isSpam": false,
+        "isNsfw": false,
+        "isMinting": false,
+        "sampleImages": [
+          "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYzQBvR1ItZKCw6geTy%2Bkea4IBXKBvLiqCT%2Bp4V%2BMC40R9tkaUJPNnKEamDg49pos5NDnpNKEhbXxn9h07Gtk%2BtE2pGu2PkfMt%2Fcf9mPd%2Bg3A%3D%3D",
+          "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYzQBvR1ItZKCw6geTy%2Bkea4IBXKBvLiqCT%2Bp4V%2BMC40R9tkaUJPNnKEamDg49pos5NDnpNKEhbXxn9h07Gtk%2BtE2pGu2PkfMt%2Fcf9mPd%2Bg3A%3D%3D",
+          "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYzQBvR1ItZKCw6geTy%2Bkea4IBXKBvLiqCT%2Bp4V%2BMC40R9tkaUJPNnKEamDg49pos5NDnpNKEhbXxn9h07Gtk%2BtE2pGu2PkfMt%2Fcf9mPd%2Bg3A%3D%3D",
+          "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYzQBvR1ItZKCw6geTy%2Bkea4IBXKBvLiqCT%2Bp4V%2BMC40R9tkaUJPNnKEamDg49pos5NDnpNKEhbXxn9h07Gtk%2BtE2pGu2PkfMt%2Fcf9mPd%2Bg3A%3D%3D"
+        ],
+        "tokenCount": "2853",
+        "onSaleCount": "334",
+        "primaryContract": "0xc00ff56e8c9014b80b3c10eb0f3c5c29be5f3a5b",
+        "tokenSetId": "contract:0xc00ff56e8c9014b80b3c10eb0f3c5c29be5f3a5b",
+        "creator": "0x4d6dffda05cf271147eb3494b23791f08965d51e",
+        "isSharedContract": false,
+        "royalties": {
+          "recipient": null,
+          "breakdown": [],
+          "bps": 0
+        },
+        "allRoyalties": {
+          "eip2981": [],
+          "onchain": [],
+          "opensea": [
+            {
+              "bps": 500,
+              "required": true,
+              "recipient": "0x4d6dffda05cf271147eb3494b23791f08965d51e"
+            }
+          ]
+        },
+        "floorAsk": {
+          "id": "0x0e6f7890bd92ebd1c1017ea488312c9739b079d0c6b096cae43da2769d94fa39",
+          "sourceDomain": "opensea.io",
+          "price": {
+            "currency": {
+              "contract": "0x0000000000000000000000000000000000000000",
+              "name": "Ether",
+              "symbol": "ETH",
+              "decimals": 18
+            },
+            "amount": {
+              "raw": "8000000000000000",
+              "decimal": 0.008,
+              "usd": 26.56225,
+              "native": 0.008
+            }
+          },
+          "maker": "0x1bc2cffab5fc485dbdf6a0828b8d022d28f34f7d",
+          "validFrom": 1712511124,
+          "validUntil": 1712514722,
+          "token": {
+            "contract": "0xc00ff56e8c9014b80b3c10eb0f3c5c29be5f3a5b",
+            "tokenId": "1740",
+            "name": "Based Blocks",
+            "image": "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYzQBvR1ItZKCw6geTy%2Bkea4IBXKBvLiqCT%2Bp4V%2BMC40R9tkaUJPNnKEamDg49pos5NDnpNKEhbXxn9h07Gtk%2BtT1aQTM5b9%2FmZEV0aBr0yDGkQ%2BLE1dQPNkEhz%2FQZbGD8%3D?width=512"
+          }
+        },
+        "topBid": {
+          "id": "0x9943b56e099e0b9afba1211717b3edfe1b79dd19999f325a05b3205ddd87ede9",
+          "sourceDomain": "opensea.io",
+          "price": {
+            "currency": {
+              "contract": "0x4200000000000000000000000000000000000006",
+              "name": "Wrapped Ether",
+              "symbol": "WETH",
+              "decimals": 18
+            },
+            "amount": {
+              "raw": "7000000000000000",
+              "decimal": 0.007,
+              "usd": 23.29525,
+              "native": 0.007
+            },
+            "netAmount": {
+              "raw": "6475000000000000",
+              "decimal": 0.00647,
+              "usd": 21.5481,
+              "native": 0.00647
+            }
+          },
+          "maker": "0xc911eddd90b0fb4c7df588f731678f8eb3c60b58",
+          "validFrom": 1712510723,
+          "validUntil": 1712597020
+        },
+        "rank": {
+          "1day": 29,
+          "7day": null,
+          "30day": null,
+          "allTime": null
+        },
+        "volume": {
+          "1day": 3.0316,
+          "7day": 3.0316,
+          "30day": 3.0316,
+          "allTime": 3.0316
+        },
+        "volumeChange": {
+          "1day": null,
+          "7day": null,
+          "30day": null
+        },
+        "floorSale": {
+          "1day": 0.0044,
+          "7day": null,
+          "30day": null
+        },
+        "floorSaleChange": {
+          "1day": 1.8181818181818181,
+          "7day": null,
+          "30day": null
+        },
+        "collectionBidSupported": true,
+        "ownerCount": 1248,
+        "contractKind": "erc721",
+        "mintedTimestamp": 1712509209,
+        "mintStages": []
+      },
+    "contractName": "based block",
+    "monitor": {
+      "mode": "timestamp",
+      "timestamp": "1712512800"
+    }
+  }
