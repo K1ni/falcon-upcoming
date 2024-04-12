@@ -6,8 +6,8 @@
       "value": "0.0074",
       "gasLimit": "155000",
       "isHex": false,
-      "isAutoGasLimit": true,
-      "isSimulate": true,
+      "isAutoGasLimit": false,
+      "isSimulate": false,
       "selectedFunction": "mint",
       "functionInputs": {
         "creatorContractAddress": "0xc08cafa537b45e49417bd0f02916f9ad0096584f",
