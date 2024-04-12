@@ -1,1172 +1,352 @@
 {
-  "name": "based apes",
-  "timestamp":1712858400,
-  "contractAddress": "0x00005EA00Ac477B1030CE78506496e8C2dE24bf5",
+  "name": "Doppelgangers ",
+  "contractAddress": "0xa4f0ad1f7fb8cf643d2dfa61584ace8343be441d",
   "task": {
-      "value": "0.04",
-      "hex": "0x161ac21f00000000000000000000000075f3f82281aec964c096f1caa5203724d47cf30b0000000000000000000000000000a26b00c1f0df003000390027140000faa71900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005",
+      "txCount": "1",
+      "value": "0.025",
+      "hex": "0x0d1d7ae50000000000000000000000000000000000000000000000000000000000000001",
       "isHex": false,
       "isAutoGasLimit": true,
       "isSimulate": true,
       "selectedFunction": "mintPublic",
       "functionInputs": {
-        "nftContract": "0x75f3F82281aEC964c096f1cAA5203724d47Cf30B",
-        "feeRecipient": "0x0000a26b00c1F0DF003000390027140000fAa719",
-        "minterIfNotPayer": "0x0000000000000000000000000000000000000000",
-        "quantity": "5"
+        "quantity": "1"
       },
-      "contractAddress": "0x00005EA00Ac477B1030CE78506496e8C2dE24bf5"
+      "contractAddress": "0xa4f0ad1f7fb8cf643d2dfa61584ace8343be441d"
     
   },
   "abi": [
     {
-      "inputs": [],
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "phaseIndices",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "bool",
+          "name": "activatePublic",
+          "type": "bool"
+        }
+      ],
+      "name": "activatePhases",
+      "outputs": [],
       "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "inputs": [],
-      "name": "CreatorPayoutAddressCannotBeZeroAddress",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "DuplicateFeeRecipient",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "DuplicatePayer",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "FeeRecipientCannotBeZeroAddress",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "FeeRecipientNotAllowed",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "FeeRecipientNotPresent",
-      "type": "error"
+      "type": "function"
     },
     {
       "inputs": [
         {
           "internalType": "uint256",
-          "name": "got",
+          "name": "phaseIndex",
           "type": "uint256"
         },
         {
-          "internalType": "uint256",
-          "name": "want",
-          "type": "uint256"
+          "internalType": "uint64[]",
+          "name": "quantities",
+          "type": "uint64[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "recipients",
+          "type": "address[]"
         }
       ],
-      "name": "IncorrectPayment",
-      "type": "error"
+      "name": "airdropForPhase",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     },
     {
       "inputs": [
         {
-          "internalType": "uint256",
-          "name": "feeBps",
-          "type": "uint256"
+          "internalType": "uint64[]",
+          "name": "quantities",
+          "type": "uint64[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "recipients",
+          "type": "address[]"
         }
       ],
-      "name": "InvalidFeeBps",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "InvalidProof",
-      "type": "error"
+      "name": "airdropPublic",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     },
     {
       "inputs": [
         {
           "internalType": "address",
-          "name": "recoveredSigner",
-          "type": "address"
-        }
-      ],
-      "name": "InvalidSignature",
-      "type": "error"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "got",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "maximum",
-          "type": "uint256"
-        }
-      ],
-      "name": "InvalidSignedEndTime",
-      "type": "error"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "got",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "minimumOrMaximum",
-          "type": "uint256"
-        }
-      ],
-      "name": "InvalidSignedFeeBps",
-      "type": "error"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "got",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "maximum",
-          "type": "uint256"
-        }
-      ],
-      "name": "InvalidSignedMaxTokenSupplyForStage",
-      "type": "error"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "got",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "maximum",
-          "type": "uint256"
-        }
-      ],
-      "name": "InvalidSignedMaxTotalMintableByWallet",
-      "type": "error"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "got",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "minimum",
-          "type": "uint256"
-        }
-      ],
-      "name": "InvalidSignedMintPrice",
-      "type": "error"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "got",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "minimum",
-          "type": "uint256"
-        }
-      ],
-      "name": "InvalidSignedStartTime",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "MintQuantityCannotBeZero",
-      "type": "error"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "total",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "allowed",
-          "type": "uint256"
-        }
-      ],
-      "name": "MintQuantityExceedsMaxMintedPerWallet",
-      "type": "error"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "total",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "maxSupply",
-          "type": "uint256"
-        }
-      ],
-      "name": "MintQuantityExceedsMaxSupply",
-      "type": "error"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "total",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "maxTokenSupplyForStage",
-          "type": "uint256"
-        }
-      ],
-      "name": "MintQuantityExceedsMaxTokenSupplyForStage",
-      "type": "error"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "currentTimestamp",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "startTimestamp",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "endTimestamp",
-          "type": "uint256"
-        }
-      ],
-      "name": "NotActive",
-      "type": "error"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "sender",
-          "type": "address"
-        }
-      ],
-      "name": "OnlyINonFungibleSeaDropToken",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "PayerCannotBeZeroAddress",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "PayerNotAllowed",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "PayerNotPresent",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "SignatureAlreadyUsed",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "SignedMintsMustRestrictFeeRecipients",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "SignerCannotBeZeroAddress",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "SignerNotPresent",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "TokenGatedDropAllowedNftTokenCannotBeDropToken",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "TokenGatedDropAllowedNftTokenCannotBeZeroAddress",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "TokenGatedDropStageNotPresent",
-      "type": "error"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "allowedNftToken",
+          "name": "operator",
           "type": "address"
         },
         {
           "internalType": "uint256",
-          "name": "allowedNftTokenId",
+          "name": "tokenId",
           "type": "uint256"
         }
       ],
-      "name": "TokenGatedNotTokenOwner",
-      "type": "error"
+      "name": "approve",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
     },
     {
       "inputs": [
-        {
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "allowedNftToken",
-          "type": "address"
-        },
         {
           "internalType": "uint256",
-          "name": "allowedNftTokenId",
+          "name": "tokenId",
           "type": "uint256"
         }
       ],
-      "name": "TokenGatedTokenIdAlreadyRedeemed",
-      "type": "error"
+      "name": "burn",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     },
     {
-      "anonymous": false,
+      "inputs": [],
+      "name": "capMaxSupply",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
       "inputs": [
         {
-          "indexed": true,
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        },
+          "internalType": "uint256",
+          "name": "phaseIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "endPhase",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
         {
-          "indexed": true,
-          "internalType": "bytes32",
-          "name": "previousMerkleRoot",
-          "type": "bytes32"
-        },
+          "internalType": "uint64[]",
+          "name": "phaseIndices",
+          "type": "uint64[]"
+        }
+      ],
+      "name": "endPhases",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
         {
-          "indexed": true,
-          "internalType": "bytes32",
-          "name": "newMerkleRoot",
-          "type": "bytes32"
-        },
-        {
-          "indexed": false,
-          "internalType": "string[]",
-          "name": "publicKeyURI",
-          "type": "string[]"
-        },
-        {
-          "indexed": false,
           "internalType": "string",
-          "name": "allowListURI",
+          "name": "_name",
           "type": "string"
-        }
-      ],
-      "name": "AllowListUpdated",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
         },
         {
-          "indexed": true,
-          "internalType": "address",
-          "name": "feeRecipient",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "bool",
-          "name": "allowed",
-          "type": "bool"
-        }
-      ],
-      "name": "AllowedFeeRecipientUpdated",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "newPayoutAddress",
-          "type": "address"
-        }
-      ],
-      "name": "CreatorPayoutAddressUpdated",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        },
-        {
-          "indexed": false,
           "internalType": "string",
-          "name": "newDropURI",
+          "name": "_symbol",
           "type": "string"
-        }
-      ],
-      "name": "DropURIUpdated",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
         },
         {
-          "indexed": true,
-          "internalType": "address",
-          "name": "payer",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "bool",
-          "name": "allowed",
-          "type": "bool"
-        }
-      ],
-      "name": "PayerUpdated",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
+          "internalType": "string",
+          "name": "_baseUri",
+          "type": "string"
         },
         {
           "components": [
             {
-              "internalType": "uint80",
-              "name": "mintPrice",
-              "type": "uint80"
+              "internalType": "address",
+              "name": "royaltyAddress",
+              "type": "address"
             },
             {
-              "internalType": "uint48",
-              "name": "startTime",
-              "type": "uint48"
+              "internalType": "uint96",
+              "name": "royaltyAmount",
+              "type": "uint96"
+            }
+          ],
+          "internalType": "struct RoyaltySettings",
+          "name": "_royaltySettings",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint64",
+              "name": "maxSupply",
+              "type": "uint64"
             },
             {
-              "internalType": "uint48",
-              "name": "endTime",
-              "type": "uint48"
+              "internalType": "uint64",
+              "name": "amountMinted",
+              "type": "uint64"
             },
             {
-              "internalType": "uint16",
-              "name": "maxTotalMintableByWallet",
-              "type": "uint16"
+              "internalType": "uint64",
+              "name": "maxPerWallet",
+              "type": "uint64"
             },
             {
-              "internalType": "uint16",
-              "name": "feeBps",
-              "type": "uint16"
+              "internalType": "bytes32",
+              "name": "merkleRoot",
+              "type": "bytes32"
             },
             {
               "internalType": "bool",
-              "name": "restrictFeeRecipients",
+              "name": "isActive",
               "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
             }
           ],
-          "indexed": false,
-          "internalType": "struct PublicDrop",
-          "name": "publicDrop",
-          "type": "tuple"
-        }
-      ],
-      "name": "PublicDropUpdated",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "minter",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "feeRecipient",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "internalType": "address",
-          "name": "payer",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "quantityMinted",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "unitMintPrice",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "feeBps",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "dropStageIndex",
-          "type": "uint256"
-        }
-      ],
-      "name": "SeaDropMint",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "signer",
-          "type": "address"
+          "internalType": "struct PhaseSettings[]",
+          "name": "_phases",
+          "type": "tuple[]"
         },
         {
           "components": [
             {
-              "internalType": "uint80",
-              "name": "minMintPrice",
-              "type": "uint80"
+              "internalType": "uint64",
+              "name": "maxSupply",
+              "type": "uint64"
             },
             {
-              "internalType": "uint24",
-              "name": "maxMaxTotalMintableByWallet",
-              "type": "uint24"
+              "internalType": "uint64",
+              "name": "maxPerWallet",
+              "type": "uint64"
             },
             {
-              "internalType": "uint40",
-              "name": "minStartTime",
-              "type": "uint40"
+              "internalType": "uint64",
+              "name": "amountMinted",
+              "type": "uint64"
             },
             {
-              "internalType": "uint40",
-              "name": "maxEndTime",
-              "type": "uint40"
-            },
-            {
-              "internalType": "uint40",
-              "name": "maxMaxTokenSupplyForStage",
-              "type": "uint40"
-            },
-            {
-              "internalType": "uint16",
-              "name": "minFeeBps",
-              "type": "uint16"
-            },
-            {
-              "internalType": "uint16",
-              "name": "maxFeeBps",
-              "type": "uint16"
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
             }
           ],
-          "indexed": false,
-          "internalType": "struct SignedMintValidationParams",
-          "name": "signedMintValidationParams",
+          "internalType": "struct BaseSettings",
+          "name": "_baseSettings",
           "type": "tuple"
-        }
-      ],
-      "name": "SignedMintValidationParamsUpdated",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "allowedNftToken",
-          "type": "address"
         },
         {
           "components": [
             {
-              "internalType": "uint80",
-              "name": "mintPrice",
-              "type": "uint80"
+              "internalType": "address[]",
+              "name": "payees",
+              "type": "address[]"
             },
             {
-              "internalType": "uint16",
-              "name": "maxTotalMintableByWallet",
-              "type": "uint16"
-            },
-            {
-              "internalType": "uint48",
-              "name": "startTime",
-              "type": "uint48"
-            },
-            {
-              "internalType": "uint48",
-              "name": "endTime",
-              "type": "uint48"
-            },
-            {
-              "internalType": "uint8",
-              "name": "dropStageIndex",
-              "type": "uint8"
-            },
-            {
-              "internalType": "uint32",
-              "name": "maxTokenSupplyForStage",
-              "type": "uint32"
-            },
-            {
-              "internalType": "uint16",
-              "name": "feeBps",
-              "type": "uint16"
-            },
-            {
-              "internalType": "bool",
-              "name": "restrictFeeRecipients",
-              "type": "bool"
+              "internalType": "uint256[]",
+              "name": "shares",
+              "type": "uint256[]"
             }
           ],
-          "indexed": false,
-          "internalType": "struct TokenGatedDropStage",
-          "name": "dropStage",
+          "internalType": "struct PaymentSplitterSettings",
+          "name": "_paymentSplitterSettings",
           "type": "tuple"
-        }
-      ],
-      "name": "TokenGatedDropStageUpdated",
-      "type": "event"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        }
-      ],
-      "name": "getAllowListMerkleRoot",
-      "outputs": [
-        {
-          "internalType": "bytes32",
-          "name": "",
-          "type": "bytes32"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        }
-      ],
-      "name": "getAllowedFeeRecipients",
-      "outputs": [
-        {
-          "internalType": "address[]",
-          "name": "",
-          "type": "address[]"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "allowedNftToken",
-          "type": "address"
         },
         {
           "internalType": "uint256",
-          "name": "allowedNftTokenId",
+          "name": "_maxIntendedSupply",
           "type": "uint256"
-        }
-      ],
-      "name": "getAllowedNftTokenIdIsRedeemed",
-      "outputs": [
+        },
         {
           "internalType": "bool",
-          "name": "",
+          "name": "_allowBurning",
           "type": "bool"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
+        },
         {
           "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        }
-      ],
-      "name": "getCreatorPayoutAddress",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "nftContract",
+          "name": "_deployer",
           "type": "address"
         },
         {
           "internalType": "address",
-          "name": "feeRecipient",
+          "name": "_operatorFilter",
           "type": "address"
         }
       ],
-      "name": "getFeeRecipientIsAllowed",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "stateMutability": "view",
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
       "inputs": [
         {
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
+          "internalType": "uint64[]",
+          "name": "quantities",
+          "type": "uint64[]"
         },
         {
-          "internalType": "address",
-          "name": "payer",
-          "type": "address"
-        }
-      ],
-      "name": "getPayerIsAllowed",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        }
-      ],
-      "name": "getPayers",
-      "outputs": [
-        {
-          "internalType": "address[]",
-          "name": "",
-          "type": "address[]"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        }
-      ],
-      "name": "getPublicDrop",
-      "outputs": [
-        {
-          "components": [
-            {
-              "internalType": "uint80",
-              "name": "mintPrice",
-              "type": "uint80"
-            },
-            {
-              "internalType": "uint48",
-              "name": "startTime",
-              "type": "uint48"
-            },
-            {
-              "internalType": "uint48",
-              "name": "endTime",
-              "type": "uint48"
-            },
-            {
-              "internalType": "uint16",
-              "name": "maxTotalMintableByWallet",
-              "type": "uint16"
-            },
-            {
-              "internalType": "uint16",
-              "name": "feeBps",
-              "type": "uint16"
-            },
-            {
-              "internalType": "bool",
-              "name": "restrictFeeRecipients",
-              "type": "bool"
-            }
-          ],
-          "internalType": "struct PublicDrop",
-          "name": "",
-          "type": "tuple"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
+          "internalType": "uint32[]",
+          "name": "maxQuantities",
+          "type": "uint32[]"
         },
         {
-          "internalType": "address",
-          "name": "signer",
-          "type": "address"
-        }
-      ],
-      "name": "getSignedMintValidationParams",
-      "outputs": [
+          "internalType": "bytes32[][]",
+          "name": "proofs",
+          "type": "bytes32[][]"
+        },
         {
-          "components": [
-            {
-              "internalType": "uint80",
-              "name": "minMintPrice",
-              "type": "uint80"
-            },
-            {
-              "internalType": "uint24",
-              "name": "maxMaxTotalMintableByWallet",
-              "type": "uint24"
-            },
-            {
-              "internalType": "uint40",
-              "name": "minStartTime",
-              "type": "uint40"
-            },
-            {
-              "internalType": "uint40",
-              "name": "maxEndTime",
-              "type": "uint40"
-            },
-            {
-              "internalType": "uint40",
-              "name": "maxMaxTokenSupplyForStage",
-              "type": "uint40"
-            },
-            {
-              "internalType": "uint16",
-              "name": "minFeeBps",
-              "type": "uint16"
-            },
-            {
-              "internalType": "uint16",
-              "name": "maxFeeBps",
-              "type": "uint16"
-            }
-          ],
-          "internalType": "struct SignedMintValidationParams",
-          "name": "",
-          "type": "tuple"
+          "internalType": "uint256[]",
+          "name": "phaseIndices",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint64",
+          "name": "publicQuantity",
+          "type": "uint64"
         }
       ],
-      "stateMutability": "view",
+      "name": "mintBatch",
+      "outputs": [],
+      "stateMutability": "payable",
       "type": "function"
     },
     {
       "inputs": [
-        {
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        }
-      ],
-      "name": "getSigners",
-      "outputs": [
-        {
-          "internalType": "address[]",
-          "name": "",
-          "type": "address[]"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        }
-      ],
-      "name": "getTokenGatedAllowedTokens",
-      "outputs": [
-        {
-          "internalType": "address[]",
-          "name": "",
-          "type": "address[]"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "allowedNftToken",
-          "type": "address"
-        }
-      ],
-      "name": "getTokenGatedDrop",
-      "outputs": [
-        {
-          "components": [
-            {
-              "internalType": "uint80",
-              "name": "mintPrice",
-              "type": "uint80"
-            },
-            {
-              "internalType": "uint16",
-              "name": "maxTotalMintableByWallet",
-              "type": "uint16"
-            },
-            {
-              "internalType": "uint48",
-              "name": "startTime",
-              "type": "uint48"
-            },
-            {
-              "internalType": "uint48",
-              "name": "endTime",
-              "type": "uint48"
-            },
-            {
-              "internalType": "uint8",
-              "name": "dropStageIndex",
-              "type": "uint8"
-            },
-            {
-              "internalType": "uint32",
-              "name": "maxTokenSupplyForStage",
-              "type": "uint32"
-            },
-            {
-              "internalType": "uint16",
-              "name": "feeBps",
-              "type": "uint16"
-            },
-            {
-              "internalType": "bool",
-              "name": "restrictFeeRecipients",
-              "type": "bool"
-            }
-          ],
-          "internalType": "struct TokenGatedDropStage",
-          "name": "",
-          "type": "tuple"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "feeRecipient",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "minterIfNotPayer",
-          "type": "address"
-        },
         {
           "internalType": "uint256",
+          "name": "phaseIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64",
           "name": "quantity",
+          "type": "uint64"
+        }
+      ],
+      "name": "mintPhase",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "phaseIndex",
           "type": "uint256"
         },
         {
-          "components": [
-            {
-              "internalType": "uint256",
-              "name": "mintPrice",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "maxTotalMintableByWallet",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "startTime",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "endTime",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "dropStageIndex",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "maxTokenSupplyForStage",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "feeBps",
-              "type": "uint256"
-            },
-            {
-              "internalType": "bool",
-              "name": "restrictFeeRecipients",
-              "type": "bool"
-            }
-          ],
-          "internalType": "struct MintParams",
-          "name": "mintParams",
-          "type": "tuple"
+          "internalType": "uint64",
+          "name": "quantity",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint32",
+          "name": "maxQuantity",
+          "type": "uint32"
         },
         {
           "internalType": "bytes32[]",
@@ -1174,7 +354,7 @@
           "type": "bytes32[]"
         }
       ],
-      "name": "mintAllowList",
+      "name": "mintPhaseAllowlist",
       "outputs": [],
       "stateMutability": "payable",
       "type": "function"
@@ -1183,63 +363,31 @@
       "inputs": [
         {
           "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "feeRecipient",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "minterIfNotPayer",
-          "type": "address"
-        },
-        {
-          "components": [
-            {
-              "internalType": "address",
-              "name": "allowedNftToken",
-              "type": "address"
-            },
-            {
-              "internalType": "uint256[]",
-              "name": "allowedNftTokenIds",
-              "type": "uint256[]"
-            }
-          ],
-          "internalType": "struct TokenGatedMintParams",
-          "name": "mintParams",
-          "type": "tuple"
-        }
-      ],
-      "name": "mintAllowedTokenHolder",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "nftContract",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "feeRecipient",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "minterIfNotPayer",
+          "name": "account",
           "type": "address"
         },
         {
           "internalType": "uint256",
-          "name": "quantity",
+          "name": "phaseIndex",
           "type": "uint256"
+        },
+        {
+          "internalType": "uint64",
+          "name": "quantity",
+          "type": "uint64"
+        }
+      ],
+      "name": "mintPhaseTo",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "quantity",
+          "type": "uint64"
         }
       ],
       "name": "mintPublic",
@@ -1251,83 +399,16 @@
       "inputs": [
         {
           "internalType": "address",
-          "name": "nftContract",
+          "name": "account",
           "type": "address"
         },
         {
-          "internalType": "address",
-          "name": "feeRecipient",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "minterIfNotPayer",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
+          "internalType": "uint64",
           "name": "quantity",
-          "type": "uint256"
-        },
-        {
-          "components": [
-            {
-              "internalType": "uint256",
-              "name": "mintPrice",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "maxTotalMintableByWallet",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "startTime",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "endTime",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "dropStageIndex",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "maxTokenSupplyForStage",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "feeBps",
-              "type": "uint256"
-            },
-            {
-              "internalType": "bool",
-              "name": "restrictFeeRecipients",
-              "type": "bool"
-            }
-          ],
-          "internalType": "struct MintParams",
-          "name": "mintParams",
-          "type": "tuple"
-        },
-        {
-          "internalType": "uint256",
-          "name": "salt",
-          "type": "uint256"
-        },
-        {
-          "internalType": "bytes",
-          "name": "signature",
-          "type": "bytes"
+          "type": "uint64"
         }
       ],
-      "name": "mintSigned",
+      "name": "mintPublicTo",
       "outputs": [],
       "stateMutability": "payable",
       "type": "function"
@@ -1335,29 +416,55 @@
     {
       "inputs": [
         {
-          "components": [
-            {
-              "internalType": "bytes32",
-              "name": "merkleRoot",
-              "type": "bytes32"
-            },
-            {
-              "internalType": "string[]",
-              "name": "publicKeyURIs",
-              "type": "string[]"
-            },
-            {
-              "internalType": "string",
-              "name": "allowListURI",
-              "type": "string"
-            }
-          ],
-          "internalType": "struct AllowListData",
-          "name": "allowListData",
-          "type": "tuple"
+          "internalType": "uint256[]",
+          "name": "phaseIndices",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "bool",
+          "name": "pausePublic",
+          "type": "bool"
         }
       ],
-      "name": "updateAllowList",
+      "name": "pausePhases",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "release",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20Upgradeable",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "release",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -1366,29 +473,67 @@
       "inputs": [
         {
           "internalType": "address",
-          "name": "feeRecipient",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
           "type": "address"
         },
         {
           "internalType": "bool",
-          "name": "allowed",
+          "name": "approved",
           "type": "bool"
         }
       ],
-      "name": "updateAllowedFeeRecipient",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "_payoutAddress",
-          "type": "address"
-        }
-      ],
-      "name": "updateCreatorPayoutAddress",
+      "name": "setApprovalForAll",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -1397,11 +542,11 @@
       "inputs": [
         {
           "internalType": "string",
-          "name": "dropURI",
+          "name": "baseURI",
           "type": "string"
         }
       ],
-      "name": "updateDropURI",
+      "name": "setBaseURI",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -1410,16 +555,59 @@
       "inputs": [
         {
           "internalType": "address",
-          "name": "payer",
+          "name": "receiver",
           "type": "address"
         },
         {
-          "internalType": "bool",
-          "name": "allowed",
-          "type": "bool"
+          "internalType": "uint96",
+          "name": "feeBasisPoints",
+          "type": "uint96"
         }
       ],
-      "name": "updatePayer",
+      "name": "setRoyaltyInfo",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "toggleBurning",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -1429,157 +617,89 @@
         {
           "components": [
             {
-              "internalType": "uint80",
-              "name": "mintPrice",
-              "type": "uint80"
+              "internalType": "uint64",
+              "name": "maxSupply",
+              "type": "uint64"
             },
             {
-              "internalType": "uint48",
-              "name": "startTime",
-              "type": "uint48"
+              "internalType": "uint64",
+              "name": "maxPerWallet",
+              "type": "uint64"
             },
             {
-              "internalType": "uint48",
-              "name": "endTime",
-              "type": "uint48"
+              "internalType": "uint64",
+              "name": "amountMinted",
+              "type": "uint64"
             },
             {
-              "internalType": "uint16",
-              "name": "maxTotalMintableByWallet",
-              "type": "uint16"
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct BaseSettings",
+          "name": "_baseSettings",
+          "type": "tuple"
+        }
+      ],
+      "name": "updateBaseSettings",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "phaseIndex",
+          "type": "uint256"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint64",
+              "name": "maxSupply",
+              "type": "uint64"
             },
             {
-              "internalType": "uint16",
-              "name": "feeBps",
-              "type": "uint16"
+              "internalType": "uint64",
+              "name": "amountMinted",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "maxPerWallet",
+              "type": "uint64"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "merkleRoot",
+              "type": "bytes32"
             },
             {
               "internalType": "bool",
-              "name": "restrictFeeRecipients",
+              "name": "isActive",
               "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
             }
           ],
-          "internalType": "struct PublicDrop",
-          "name": "publicDrop",
+          "internalType": "struct PhaseSettings",
+          "name": "phase",
           "type": "tuple"
         }
       ],
-      "name": "updatePublicDrop",
+      "name": "updatePhaseSettings",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "signer",
-          "type": "address"
-        },
-        {
-          "components": [
-            {
-              "internalType": "uint80",
-              "name": "minMintPrice",
-              "type": "uint80"
-            },
-            {
-              "internalType": "uint24",
-              "name": "maxMaxTotalMintableByWallet",
-              "type": "uint24"
-            },
-            {
-              "internalType": "uint40",
-              "name": "minStartTime",
-              "type": "uint40"
-            },
-            {
-              "internalType": "uint40",
-              "name": "maxEndTime",
-              "type": "uint40"
-            },
-            {
-              "internalType": "uint40",
-              "name": "maxMaxTokenSupplyForStage",
-              "type": "uint40"
-            },
-            {
-              "internalType": "uint16",
-              "name": "minFeeBps",
-              "type": "uint16"
-            },
-            {
-              "internalType": "uint16",
-              "name": "maxFeeBps",
-              "type": "uint16"
-            }
-          ],
-          "internalType": "struct SignedMintValidationParams",
-          "name": "signedMintValidationParams",
-          "type": "tuple"
-        }
-      ],
-      "name": "updateSignedMintValidationParams",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "allowedNftToken",
-          "type": "address"
-        },
-        {
-          "components": [
-            {
-              "internalType": "uint80",
-              "name": "mintPrice",
-              "type": "uint80"
-            },
-            {
-              "internalType": "uint16",
-              "name": "maxTotalMintableByWallet",
-              "type": "uint16"
-            },
-            {
-              "internalType": "uint48",
-              "name": "startTime",
-              "type": "uint48"
-            },
-            {
-              "internalType": "uint48",
-              "name": "endTime",
-              "type": "uint48"
-            },
-            {
-              "internalType": "uint8",
-              "name": "dropStageIndex",
-              "type": "uint8"
-            },
-            {
-              "internalType": "uint32",
-              "name": "maxTokenSupplyForStage",
-              "type": "uint32"
-            },
-            {
-              "internalType": "uint16",
-              "name": "feeBps",
-              "type": "uint16"
-            },
-            {
-              "internalType": "bool",
-              "name": "restrictFeeRecipients",
-              "type": "bool"
-            }
-          ],
-          "internalType": "struct TokenGatedDropStage",
-          "name": "dropStage",
-          "type": "tuple"
-        }
-      ],
-      "name": "updateTokenGatedDrop",
+      "inputs": [],
+      "name": "withdraw",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -1596,21 +716,23 @@
     "alt": "base",
     "token": "https://cdn.routescan.io/_next/image?url=https%3a%2f%2fcms-cdn.avascan.com%2fethereum_eb89906e5b.png&w=32&q=100"
   },
+  "contractOwner": "0x4730497622bDFd6EAFe1F09Fa22B3A0ACA94a646",
+  "contractName": "Doppelgangers",
   "info": {
     "chainId": 8453,
-    "id": "0x8a6f2c9601a635a6698809c4d62f3be172892d4d",
+    "id": "0xa4f0ad1f7fb8cf643d2dfa61584ace8343be441d",
     "slug": null,
-    "createdAt": "2024-04-10T22:27:44.162Z",
-    "updatedAt": "2024-04-10T23:17:17.802Z",
-    "name": "Mintify Base Keys",
-    "symbol": "MNFBSK",
-    "contractDeployedAt": "2024-04-10T22:27:35.000Z",
-    "image": "https://pbs.twimg.com/profile_images/1777135218073501696/88elXYqK_400x400.jpg",
+    "createdAt": "2024-04-12T16:25:21.961Z",
+    "updatedAt": "2024-04-12T17:10:48.470Z",
+    "name": "Doppelgangers",
+    "symbol": "DG",
+    "contractDeployedAt": "2024-04-12T16:25:15.000Z",
+    "image": "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYEtL1WN9k%2B7ZPwOwl1HiKCnsRJzZGmdLgyQnjgboIHT%2Bge3YbKo0MvRWLiC%2FUcPZPhwuvRSxM%2FpdBcIjhwLdWH3SDw%2FvVR7xpAH7BO1UFPPQ%3D%3D?width=250",
     "banner": null,
-    "twitterUrl": "https://twitter.com/BasedApesNFTs",
+    "twitterUrl": null,
     "discordUrl": null,
-    "externalUrl": "https://basedapesnft.com/",
-    "twitterUsername": "BasedApesNFTs",
+    "externalUrl": null,
+    "twitterUsername": null,
     "openseaVerificationStatus": null,
     "magicedenVerificationStatus": null,
     "description": null,
@@ -1618,47 +740,56 @@
     "isSpam": false,
     "isNsfw": false,
     "isMinting": false,
-    "sampleImages": [],
-    "tokenCount": "25",
-    "onSaleCount": "0",
-    "primaryContract": "0x8a6f2c9601a635a6698809c4d62f3be172892d4d",
-    "tokenSetId": "contract:0x8a6f2c9601a635a6698809c4d62f3be172892d4d",
-    "creator": "0x2dcc7c4ab800bf67380e2553be1e6891a36f18e7",
+    "sampleImages": [
+      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYEtL1WN9k%2B7ZPwOwl1HiKCnsRJzZGmdLgyQnjgboIHT%2Bge3YbKo0MvRWLiC%2FUcPZPhwuvRSxM%2FpdBcIjhwLdWH3SDw%2FvVR7xpAH7BO1UFPPQ%3D%3D",
+      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYEtL1WN9k%2B7ZPwOwl1HiKCnsRJzZGmdLgyQnjgboIHT%2Bge3YbKo0MvRWLiC%2FUcPZPhwuvRSxM%2FpdBcIjhwLdWH3SDw%2FvVR7xpAH7BO1UFPPQ%3D%3D",
+      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYEtL1WN9k%2B7ZPwOwl1HiKCnsRJzZGmdLgyQnjgboIHT%2Bge3YbKo0MvRWLiC%2FUcPZPhwuvRSxM%2FpdBcIjhwLdWH3SDw%2FvVR7xpAH7BO1UFPPQ%3D%3D",
+      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYEtL1WN9k%2B7ZPwOwl1HiKCnsRJzZGmdLgyQnjgboIHT%2Bge3YbKo0MvRWLiC%2FUcPZPhwuvRSxM%2FpdBcIjhwLdWH3SDw%2FvVR7xpAH7BO1UFPPQ%3D%3D"
+    ],
+    "tokenCount": "0",
+    "onSaleCount": "28",
+    "primaryContract": "0xa4f0ad1f7fb8cf643d2dfa61584ace8343be441d",
+    "tokenSetId": "contract:0xa4f0ad1f7fb8cf643d2dfa61584ace8343be441d",
+    "creator": "0x4730497622bdfd6eafe1f09fa22b3a0aca94a646",
     "isSharedContract": false,
     "royalties": {
-      "recipient": "0x2dcc7c4ab800bf67380e2553be1e6891a36f18e7",
-      "breakdown": [
-        {
-          "bps": 200,
-          "recipient": "0x2dcc7c4ab800bf67380e2553be1e6891a36f18e7"
-        }
-      ],
-      "bps": 200
+      "recipient": null,
+      "breakdown": [],
+      "bps": 0
     },
     "allRoyalties": {
-      "eip2981": [
-        {
-          "bps": 200,
-          "recipient": "0x2dcc7c4ab800bf67380e2553be1e6891a36f18e7"
-        }
-      ],
-      "onchain": [
-        {
-          "bps": 200,
-          "recipient": "0x2dcc7c4ab800bf67380e2553be1e6891a36f18e7"
-        }
-      ]
+      "eip2981": [],
+      "onchain": []
     },
     "floorAsk": {
-      "id": null,
-      "price": null,
-      "maker": null,
-      "validFrom": 2147483647,
-      "validUntil": null,
-      "token": null
+      "id": "0xc323614db8d11081d6c0f5cfcaaa25938abd3e9ac7cbc31dbd66c2b856e1bb22",
+      "sourceDomain": "opensea.io",
+      "price": {
+        "currency": {
+          "contract": "0x0000000000000000000000000000000000000000",
+          "name": "Ether",
+          "symbol": "ETH",
+          "decimals": 18
+        },
+        "amount": {
+          "raw": "65000000000000000",
+          "decimal": 0.065,
+          "usd": 228.0576,
+          "native": 0.065
+        }
+      },
+      "maker": "0x7a166f2fe92551d6058777367634ac0d471c9c80",
+      "validFrom": 1712941805,
+      "validUntil": 1715533805,
+      "token": {
+        "contract": "0xa4f0ad1f7fb8cf643d2dfa61584ace8343be441d",
+        "tokenId": "142",
+        "name": "Doppelgangers #142",
+        "image": "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYEtL1WN9k%2B7ZPwOwl1HiKCnsRJzZGmdLgyQnjgboIHT%2Bge3YbKo0MvRWLiC%2FUcPZPhwuvRSxM%2FpdBcIjhwLdWHQhoqqbK9mhuiN9HGeJDs83e7XgX9jus9HyvaQh3R6N8%3D?width=512"
+      }
     },
     "topBid": {
-      "id": "0x34bc8be6b42ce861fdfa9f67361ce629bc7e3c8f70d9e9515ee3881697624bdd",
+      "id": "0x1b17e980cfc2d4fb0d02eff2b0f5be1e3cc4e5770684bd044fe74f88283d6e2c",
       "sourceDomain": "mintify.xyz",
       "price": {
         "currency": {
@@ -1668,21 +799,21 @@
           "decimals": 18
         },
         "amount": {
-          "raw": "90000000000000000",
-          "decimal": 0.09,
-          "usd": 318.50052,
-          "native": 0.09
+          "raw": "20000000000000000",
+          "decimal": 0.02,
+          "usd": 70.13025,
+          "native": 0.02
         },
         "netAmount": {
-          "raw": "87300000000000000",
-          "decimal": 0.0873,
-          "usd": 308.94551,
-          "native": 0.0873
+          "raw": "19800000000000000",
+          "decimal": 0.0198,
+          "usd": 69.42895,
+          "native": 0.0198
         }
       },
-      "maker": "0xba8cc8348df7dc5dadb0f3e3628a6cbb0bc62f8e",
-      "validFrom": 1712790966,
-      "validUntil": 1713395827
+      "maker": "0xb159514899d6152e8a6c631d279cd313498d9873",
+      "validFrom": 1712941678,
+      "validUntil": 1713546540
     },
     "rank": {
       "1day": null,
@@ -1712,10 +843,9 @@
       "30day": null
     },
     "collectionBidSupported": true,
-    "ownerCount": 1,
+    "ownerCount": 2,
     "contractKind": "erc721",
-    "mintedTimestamp": 1712790215,
+    "mintedTimestamp": 1712941645,
     "mintStages": []
-  },
-  "contractName": "Unknown"
+  }
 }
