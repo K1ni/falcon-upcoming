@@ -1,387 +1,23 @@
 {
-  "name": "Numbers",
-  "contractAddress": "0x0d1432877a26573f7db1989d6bb428ff5b814a44",
+  "name": "dinkies",
+  "timestamp":1713651600,
+  "contractAddress": "0x3ae78A5fcb9f42F234099F1ca64911E2cE7889F2",
   "task": {
       "txCount": "1",
-      "value": "0.00174",
-      "hex": "0x0d1d7ae50000000000000000000000000000000000000000000000000000000000000002",
+      "value": "0",
+      "hex": "0x0d1d7ae50000000000000000000000000000000000000000000000000000000000000005",
+      "rpc": "https://rpc.ankr.com/base/20fc57c5aacc6967874a12de4ea663e235874fa0f06c924795ddd00a13817def",
       "isHex": false,
       "isAutoGasLimit": true,
       "isSimulate": true,
       "selectedFunction": "mintPublic",
       "functionInputs": {
-        "quantity": "2"
+        "quantity": "5"
       },
-      "contractAddress": "0x0d1432877a26573f7db1989d6bb428ff5b814a44"
+      "contractAddress": "0x3ae78A5fcb9f42F234099F1ca64911E2cE7889F2"
     
   },
   "abi": [
-    {
-      "inputs": [
-        {
-          "internalType": "uint256[]",
-          "name": "phaseIndices",
-          "type": "uint256[]"
-        },
-        {
-          "internalType": "bool",
-          "name": "activatePublic",
-          "type": "bool"
-        }
-      ],
-      "name": "activatePhases",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "phaseIndex",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint64[]",
-          "name": "quantities",
-          "type": "uint64[]"
-        },
-        {
-          "internalType": "address[]",
-          "name": "recipients",
-          "type": "address[]"
-        }
-      ],
-      "name": "airdropForPhase",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint64[]",
-          "name": "quantities",
-          "type": "uint64[]"
-        },
-        {
-          "internalType": "address[]",
-          "name": "recipients",
-          "type": "address[]"
-        }
-      ],
-      "name": "airdropPublic",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "operator",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "approve",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "burn",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "capMaxSupply",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "phaseIndex",
-          "type": "uint256"
-        }
-      ],
-      "name": "endPhase",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint64[]",
-          "name": "phaseIndices",
-          "type": "uint64[]"
-        }
-      ],
-      "name": "endPhases",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "_name",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_symbol",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_baseUri",
-          "type": "string"
-        },
-        {
-          "components": [
-            {
-              "internalType": "address",
-              "name": "royaltyAddress",
-              "type": "address"
-            },
-            {
-              "internalType": "uint96",
-              "name": "royaltyAmount",
-              "type": "uint96"
-            }
-          ],
-          "internalType": "struct RoyaltySettings",
-          "name": "_royaltySettings",
-          "type": "tuple"
-        },
-        {
-          "components": [
-            {
-              "internalType": "uint64",
-              "name": "maxSupply",
-              "type": "uint64"
-            },
-            {
-              "internalType": "uint64",
-              "name": "amountMinted",
-              "type": "uint64"
-            },
-            {
-              "internalType": "uint64",
-              "name": "maxPerWallet",
-              "type": "uint64"
-            },
-            {
-              "internalType": "bytes32",
-              "name": "merkleRoot",
-              "type": "bytes32"
-            },
-            {
-              "internalType": "bool",
-              "name": "isActive",
-              "type": "bool"
-            },
-            {
-              "internalType": "uint256",
-              "name": "price",
-              "type": "uint256"
-            }
-          ],
-          "internalType": "struct PhaseSettings[]",
-          "name": "_phases",
-          "type": "tuple[]"
-        },
-        {
-          "components": [
-            {
-              "internalType": "uint64",
-              "name": "maxSupply",
-              "type": "uint64"
-            },
-            {
-              "internalType": "uint64",
-              "name": "maxPerWallet",
-              "type": "uint64"
-            },
-            {
-              "internalType": "uint64",
-              "name": "amountMinted",
-              "type": "uint64"
-            },
-            {
-              "internalType": "uint256",
-              "name": "price",
-              "type": "uint256"
-            }
-          ],
-          "internalType": "struct BaseSettings",
-          "name": "_baseSettings",
-          "type": "tuple"
-        },
-        {
-          "components": [
-            {
-              "internalType": "address[]",
-              "name": "payees",
-              "type": "address[]"
-            },
-            {
-              "internalType": "uint256[]",
-              "name": "shares",
-              "type": "uint256[]"
-            }
-          ],
-          "internalType": "struct PaymentSplitterSettings",
-          "name": "_paymentSplitterSettings",
-          "type": "tuple"
-        },
-        {
-          "internalType": "uint256",
-          "name": "_maxIntendedSupply",
-          "type": "uint256"
-        },
-        {
-          "internalType": "bool",
-          "name": "_allowBurning",
-          "type": "bool"
-        },
-        {
-          "internalType": "address",
-          "name": "_deployer",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "_operatorFilter",
-          "type": "address"
-        }
-      ],
-      "name": "initialize",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint64[]",
-          "name": "quantities",
-          "type": "uint64[]"
-        },
-        {
-          "internalType": "uint32[]",
-          "name": "maxQuantities",
-          "type": "uint32[]"
-        },
-        {
-          "internalType": "bytes32[][]",
-          "name": "proofs",
-          "type": "bytes32[][]"
-        },
-        {
-          "internalType": "uint256[]",
-          "name": "phaseIndices",
-          "type": "uint256[]"
-        },
-        {
-          "internalType": "uint64",
-          "name": "publicQuantity",
-          "type": "uint64"
-        }
-      ],
-      "name": "mintBatch",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "phaseIndex",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint64",
-          "name": "quantity",
-          "type": "uint64"
-        }
-      ],
-      "name": "mintPhase",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "phaseIndex",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint64",
-          "name": "quantity",
-          "type": "uint64"
-        },
-        {
-          "internalType": "uint32",
-          "name": "maxQuantity",
-          "type": "uint32"
-        },
-        {
-          "internalType": "bytes32[]",
-          "name": "proof",
-          "type": "bytes32[]"
-        }
-      ],
-      "name": "mintPhaseAllowlist",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "account",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "phaseIndex",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint64",
-          "name": "quantity",
-          "type": "uint64"
-        }
-      ],
-      "name": "mintPhaseTo",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function"
-    },
     {
       "inputs": [
         {
@@ -393,315 +29,6 @@
       "name": "mintPublic",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "account",
-          "type": "address"
-        },
-        {
-          "internalType": "uint64",
-          "name": "quantity",
-          "type": "uint64"
-        }
-      ],
-      "name": "mintPublicTo",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256[]",
-          "name": "phaseIndices",
-          "type": "uint256[]"
-        },
-        {
-          "internalType": "bool",
-          "name": "pausePublic",
-          "type": "bool"
-        }
-      ],
-      "name": "pausePhases",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address payable",
-          "name": "account",
-          "type": "address"
-        }
-      ],
-      "name": "release",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "contract IERC20Upgradeable",
-          "name": "token",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "account",
-          "type": "address"
-        }
-      ],
-      "name": "release",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "renounceOwnership",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "safeTransferFrom",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "bytes",
-          "name": "data",
-          "type": "bytes"
-        }
-      ],
-      "name": "safeTransferFrom",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "operator",
-          "type": "address"
-        },
-        {
-          "internalType": "bool",
-          "name": "approved",
-          "type": "bool"
-        }
-      ],
-      "name": "setApprovalForAll",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "baseURI",
-          "type": "string"
-        }
-      ],
-      "name": "setBaseURI",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "receiver",
-          "type": "address"
-        },
-        {
-          "internalType": "uint96",
-          "name": "feeBasisPoints",
-          "type": "uint96"
-        }
-      ],
-      "name": "setRoyaltyInfo",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "toggleBurning",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "transferFrom",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "newOwner",
-          "type": "address"
-        }
-      ],
-      "name": "transferOwnership",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "components": [
-            {
-              "internalType": "uint64",
-              "name": "maxSupply",
-              "type": "uint64"
-            },
-            {
-              "internalType": "uint64",
-              "name": "maxPerWallet",
-              "type": "uint64"
-            },
-            {
-              "internalType": "uint64",
-              "name": "amountMinted",
-              "type": "uint64"
-            },
-            {
-              "internalType": "uint256",
-              "name": "price",
-              "type": "uint256"
-            }
-          ],
-          "internalType": "struct BaseSettings",
-          "name": "_baseSettings",
-          "type": "tuple"
-        }
-      ],
-      "name": "updateBaseSettings",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "phaseIndex",
-          "type": "uint256"
-        },
-        {
-          "components": [
-            {
-              "internalType": "uint64",
-              "name": "maxSupply",
-              "type": "uint64"
-            },
-            {
-              "internalType": "uint64",
-              "name": "amountMinted",
-              "type": "uint64"
-            },
-            {
-              "internalType": "uint64",
-              "name": "maxPerWallet",
-              "type": "uint64"
-            },
-            {
-              "internalType": "bytes32",
-              "name": "merkleRoot",
-              "type": "bytes32"
-            },
-            {
-              "internalType": "bool",
-              "name": "isActive",
-              "type": "bool"
-            },
-            {
-              "internalType": "uint256",
-              "name": "price",
-              "type": "uint256"
-            }
-          ],
-          "internalType": "struct PhaseSettings",
-          "name": "phase",
-          "type": "tuple"
-        }
-      ],
-      "name": "updatePhaseSettings",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "withdraw",
-      "outputs": [],
-      "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
@@ -716,54 +43,75 @@
     "alt": "base",
     "token": "https://cdn.routescan.io/_next/image?url=https%3a%2f%2fcms-cdn.avascan.com%2fethereum_eb89906e5b.png&w=32&q=100"
   },
-  "contractOwner": "0x917fE45581C819dE9d75fA428705e38b69587fc8",
-  "contractName": "Numbers",
+  "contractName": "dinkies",
+  "contractOwner": "0x34A124b036C3963b15948B8e8BE0DFAE05e914ae",
   "info": {
     "chainId": 8453,
-    "id": "0x0d1432877a26573f7db1989d6bb428ff5b814a44",
-    "slug": "numbers-78",
-    "createdAt": "2024-04-20T11:59:16.788Z",
-    "updatedAt": "2024-04-20T13:16:43.374Z",
-    "name": "Numbers",
-    "symbol": "NMB",
-    "contractDeployedAt": "2024-04-20T11:59:07.000Z",
-    "image": "https://img.reservoir.tools/images/v2/base/tiYFZkMK2%2FjjULMGpvXFcxFSu1rpZq1x5aj%2B4TLfXFyHhuSZQwb8eUqLXcGMLuydPh01tKHGJbrXcXPzLqhmyMQ1%2BNFjA4udaQpY0xdizuE6R8fEJeCGd5wthox25LutapUfS3kszRUpYGgm7NiM7tc4Jc7ryGhuDLLkGNLe%2Bw1zw2kcHS83ign5kvx3Zl58gLbDcxw3zK1%2FztuP39Roww%3D%3D?width=250",
+    "id": "0x3ae78a5fcb9f42f234099f1ca64911e2ce7889f2",
+    "slug": "dinkies",
+    "createdAt": "2024-04-20T08:28:23.871Z",
+    "updatedAt": "2024-04-20T19:45:16.087Z",
+    "name": "dinkies",
+    "symbol": "dnks",
+    "contractDeployedAt": "2024-04-20T08:28:15.000Z",
+    "image": "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZV4atW1H2xn6RoXiHdLWqFb1rTMIZR%2FABSflRjRTaAbW%2BTNZewQT5r8FeFXD1AiJi1aLgQL7pqyEGSEBndlirGx73%2BJ3ujwBzJ%2BUe0r%2Fq6BBMPpTpc28ynCjkvcC14gds%3D?width=250",
     "banner": "",
     "twitterUrl": null,
     "discordUrl": "",
     "externalUrl": "",
-    "twitterUsername": "",
+    "twitterUsername": "dinkies_",
     "openseaVerificationStatus": "not_requested",
     "magicedenVerificationStatus": null,
-    "description": "",
+    "description": "what are dinkies?\n\n \n\n12x12 “dinks” inspired by my obsession with minimizing everything, cryptopunks inspired traits, and doodles eyes.",
     "metadataDisabled": false,
     "isSpam": false,
     "isNsfw": false,
     "isMinting": false,
     "sampleImages": [
-      "https://img.reservoir.tools/images/v2/base/tiYFZkMK2%2FjjULMGpvXFcxFSu1rpZq1x5aj%2B4TLfXFyHhuSZQwb8eUqLXcGMLuydPh01tKHGJbrXcXPzLqhmyMQ1%2BNFjA4udaQpY0xdizuE6R8fEJeCGd5wthox25LutapUfS3kszRUpYGgm7NiM7tc4Jc7ryGhuDLLkGNLe%2Bw0kDgOpmBkmsplvC443xyvy",
-      "https://img.reservoir.tools/images/v2/base/tiYFZkMK2%2FjjULMGpvXFcxFSu1rpZq1x5aj%2B4TLfXFyHhuSZQwb8eUqLXcGMLuydPh01tKHGJbrXcXPzLqhmyMQ1%2BNFjA4udaQpY0xdizuE6R8fEJeCGd5wthox25LutapUfS3kszRUpYGgm7NiM7tc4Jc7ryGhuDLLkGNLe%2Bw0kDgOpmBkmsplvC443xyvy",
-      "https://img.reservoir.tools/images/v2/base/tiYFZkMK2%2FjjULMGpvXFcxFSu1rpZq1x5aj%2B4TLfXFyHhuSZQwb8eUqLXcGMLuydPh01tKHGJbrXcXPzLqhmyMQ1%2BNFjA4udaQpY0xdizuE6R8fEJeCGd5wthox25LutapUfS3kszRUpYGgm7NiM7tc4Jc7ryGhuDLLkGNLe%2Bw0kDgOpmBkmsplvC443xyvy",
-      "https://img.reservoir.tools/images/v2/base/tiYFZkMK2%2FjjULMGpvXFcxFSu1rpZq1x5aj%2B4TLfXFyHhuSZQwb8eUqLXcGMLuydPh01tKHGJbrXcXPzLqhmyMQ1%2BNFjA4udaQpY0xdizuE6R8fEJeCGd5wthox25LutapUfS3kszRUpYGgm7NiM7tc4Jc7ryGhuDLLkGNLe%2Bw0kDgOpmBkmsplvC443xyvy"
+      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZV4atW1H2xn6RoXiHdLWqFb1rTMIZR%2FABSflRjRTaAbW%2BTNZewQT5r8FeFXD1AiJi1aLgQL7pqyEGSEBndlirG9ScOIXtgtkWEJdPfnrg4Jw%3D%3D",
+      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZV4atW1H2xn6RoXiHdLWqFb1rTMIZR%2FABSflRjRTaAbW%2BTNZewQT5r8FeFXD1AiJi1aLgQL7pqyEGSEBndlirG9ScOIXtgtkWEJdPfnrg4Jw%3D%3D",
+      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZV4atW1H2xn6RoXiHdLWqFb1rTMIZR%2FABSflRjRTaAbW%2BTNZewQT5r8FeFXD1AiJi1aLgQL7pqyEGSEBndlirG9ScOIXtgtkWEJdPfnrg4Jw%3D%3D",
+      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZV4atW1H2xn6RoXiHdLWqFb1rTMIZR%2FABSflRjRTaAbW%2BTNZewQT5r8FeFXD1AiJi1aLgQL7pqyEGSEBndlirG9ScOIXtgtkWEJdPfnrg4Jw%3D%3D"
     ],
-    "tokenCount": "339",
-    "onSaleCount": "76",
-    "primaryContract": "0x0d1432877a26573f7db1989d6bb428ff5b814a44",
-    "tokenSetId": "contract:0x0d1432877a26573f7db1989d6bb428ff5b814a44",
-    "creator": "0x917fe45581c819de9d75fa428705e38b69587fc8",
+    "tokenCount": "962",
+    "onSaleCount": "80",
+    "primaryContract": "0x3ae78a5fcb9f42f234099f1ca64911e2ce7889f2",
+    "tokenSetId": "contract:0x3ae78a5fcb9f42f234099f1ca64911e2ce7889f2",
+    "creator": "0x34a124b036c3963b15948b8e8be0dfae05e914ae",
     "isSharedContract": false,
     "royalties": {
-      "recipient": null,
-      "breakdown": [],
-      "bps": 0
+      "recipient": "0x34a124b036c3963b15948b8e8be0dfae05e914ae",
+      "breakdown": [
+        {
+          "bps": 500,
+          "recipient": "0x34a124b036c3963b15948b8e8be0dfae05e914ae"
+        }
+      ],
+      "bps": 500
     },
     "allRoyalties": {
-      "eip2981": [],
-      "onchain": [],
-      "opensea": []
+      "eip2981": [
+        {
+          "bps": 500,
+          "recipient": "0x34a124b036c3963b15948b8e8be0dfae05e914ae"
+        }
+      ],
+      "onchain": [
+        {
+          "bps": 500,
+          "recipient": "0x34a124b036c3963b15948b8e8be0dfae05e914ae"
+        }
+      ],
+      "opensea": [
+        {
+          "bps": 500,
+          "required": false,
+          "recipient": "0x34a124b036c3963b15948b8e8be0dfae05e914ae"
+        }
+      ]
     },
     "floorAsk": {
-      "id": "0x75c67c74560bf22d56d4867ac935e1478979d24c97be00ba97489c81991ad489",
+      "id": "0x46bffa23be407360e350b596f80323bc934bb1bf9aa3d9c3c3227febead4f4ad",
       "sourceDomain": "opensea.io",
       "price": {
         "currency": {
@@ -773,24 +121,24 @@
           "decimals": 18
         },
         "amount": {
-          "raw": "3800000000000000",
-          "decimal": 0.0038,
-          "usd": 11.64959,
-          "native": 0.0038
+          "raw": "1090000000000000",
+          "decimal": 0.00109,
+          "usd": 3.34159,
+          "native": 0.00109
         }
       },
-      "maker": "0x101f2aad4a14383a1a7ed73c7f5747dcae1c133f",
-      "validFrom": 1713618994,
-      "validUntil": 1713620794,
+      "maker": "0xbac44851587e68495f6bf2f91bd8260234d6bcbb",
+      "validFrom": 1713634883,
+      "validUntil": 1716226761,
       "token": {
-        "contract": "0x0d1432877a26573f7db1989d6bb428ff5b814a44",
-        "tokenId": "306",
-        "name": "Numbers  #306",
-        "image": "https://img.reservoir.tools/images/v2/base/tiYFZkMK2%2FjjULMGpvXFcxFSu1rpZq1x5aj%2B4TLfXFyHhuSZQwb8eUqLXcGMLuydPh01tKHGJbrXcXPzLqhmyMQ1%2BNFjA4udaQpY0xdizuE6R8fEJeCGd5wthox25LutapUfS3kszRUpYGgm7NiM7tc4Jc7ryGhuDLLkGNLe%2Bw1zw2kcHS83ign5kvx3Zl58UHKQSMVdnWtnM3ma0onLYg%3D%3D?width=512"
+        "contract": "0x3ae78a5fcb9f42f234099f1ca64911e2ce7889f2",
+        "tokenId": "238",
+        "name": "dinky #238",
+        "image": "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZV4atW1H2xn6RoXiHdLWqFb1rTMIZR%2FABSflRjRTaAbW%2BTNZewQT5r8FeFXD1AiJi1aLgQL7pqyEGSEBndlirGsHDdVpjjpOQc41h5mD5CFbR7OT0gRi5dHQLe5q79uH4%3D?width=512"
       }
     },
     "topBid": {
-      "id": "0xe4a0100203e007ade2a8185a6286f8935637cbd521848392a7414e2716a80031",
+      "id": "0x9b43bb3299bbf4662b375724c050ded85c248061390c29f4cfd655e2032816cb",
       "sourceDomain": "opensea.io",
       "price": {
         "currency": {
@@ -800,33 +148,33 @@
           "decimals": 18
         },
         "amount": {
-          "raw": "1000000000000000",
-          "decimal": 0.001,
-          "usd": 3.06548,
-          "native": 0.001
+          "raw": "500000000000000",
+          "decimal": 0.0005,
+          "usd": 1.53274,
+          "native": 0.0005
         },
         "netAmount": {
-          "raw": "975000000000000",
-          "decimal": 0.00097,
-          "usd": 2.98884,
-          "native": 0.00097
+          "raw": "487500000000000",
+          "decimal": 0.00049,
+          "usd": 1.49442,
+          "native": 0.00049
         }
       },
-      "maker": "0xb7cddcbb750e21ef37835de8d8fa66d595b569a5",
-      "validFrom": 1713618704,
-      "validUntil": 1714223457
+      "maker": "0xeeabdc0a008cf9450faa1ecdd5948987ec75ac86",
+      "validFrom": 1713639825,
+      "validUntil": 1714244614
     },
     "rank": {
-      "1day": 74,
+      "1day": 95,
       "7day": null,
       "30day": null,
       "allTime": null
     },
     "volume": {
-      "1day": 0.1999,
-      "7day": 0.2104,
-      "30day": 0.2104,
-      "allTime": 0.2104
+      "1day": 0.07906,
+      "7day": 0.07906,
+      "30day": 0.07906,
+      "allTime": 0.07906
     },
     "volumeChange": {
       "1day": null,
@@ -834,19 +182,19 @@
       "30day": null
     },
     "floorSale": {
-      "1day": 0.0035,
+      "1day": 0.0001,
       "7day": null,
       "30day": null
     },
     "floorSaleChange": {
-      "1day": 1.0857142857142856,
+      "1day": 10.9,
       "7day": null,
       "30day": null
     },
     "collectionBidSupported": true,
-    "ownerCount": 166,
+    "ownerCount": 399,
     "contractKind": "erc721",
-    "mintedTimestamp": 1713617921,
+    "mintedTimestamp": 1713602009,
     "mintStages": []
   }
 }
