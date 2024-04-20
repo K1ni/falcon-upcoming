@@ -6,7 +6,6 @@
       "txCount": "1",
       "value": "0",
       "hex": "0x0d1d7ae50000000000000000000000000000000000000000000000000000000000000005",
-      "rpc": "https://rpc.ankr.com/base/20fc57c5aacc6967874a12de4ea663e235874fa0f06c924795ddd00a13817def",
       "isHex": false,
       "isAutoGasLimit": true,
       "isSimulate": true,
