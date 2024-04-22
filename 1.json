@@ -1,39 +1,341 @@
 {
-  "name": "dinkies",
-  "timestamp":1713651600,
-  "contractAddress": "0x3ae78A5fcb9f42F234099F1ca64911E2cE7889F2",
+  "name": "CHAMPIONS",
+  "timestamp":"5PM UTC",
+  "contractAddress": "0xab89de4ecfc9629c1dc3d4dcb337fab98b16aab5",
   "task": {
       "txCount": "1",
-      "value": "0",
-      "hex": "0x0d1d7ae50000000000000000000000000000000000000000000000000000000000000005",
-      "rpc": "https://rpc.ankr.com/base/20fc57c5aacc6967874a12de4ea663e235874fa0f06c924795ddd00a13817def",
+      "value": "0.0069",
       "isHex": false,
       "isAutoGasLimit": true,
       "isSimulate": true,
-      "selectedFunction": "mintPublic",
+      "selectedFunction": "mint",
       "functionInputs": {
-        "quantity": "5"
+        "_mintAmount": "1"
       },
-      "contractAddress": "0x3ae78A5fcb9f42F234099F1ca64911E2cE7889F2"
+      "contractAddress": "0xab89de4ecfc9629c1dc3d4dcb337fab98b16aab5"
     
   },
   "abi": [
     {
       "inputs": [
         {
-          "internalType": "uint64",
-          "name": "quantity",
-          "type": "uint64"
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
         }
       ],
-      "name": "mintPublic",
+      "name": "approve",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_mintAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint",
       "outputs": [],
       "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_mintAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_receiver",
+          "type": "address"
+        }
+      ],
+      "name": "mintForAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        }
+      ],
+      "name": "setApprovalForAll",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_cost",
+          "type": "uint256"
+        }
+      ],
+      "name": "setCost",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_hiddenMetadataUri",
+          "type": "string"
+        }
+      ],
+      "name": "setHiddenMetadataUri",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_maxMintAmountPerTx",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMaxMintAmountPerTx",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_merkleRoot",
+          "type": "bytes32"
+        }
+      ],
+      "name": "setMerkleRoot",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_state",
+          "type": "bool"
+        }
+      ],
+      "name": "setPaused",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_limit",
+          "type": "uint256"
+        }
+      ],
+      "name": "setPhaseLimit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_state",
+          "type": "bool"
+        }
+      ],
+      "name": "setRevealed",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_uriPrefix",
+          "type": "string"
+        }
+      ],
+      "name": "setUriPrefix",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_uriSuffix",
+          "type": "string"
+        }
+      ],
+      "name": "setUriSuffix",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_state",
+          "type": "bool"
+        }
+      ],
+      "name": "setWhitelistMintEnabled",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_mintAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "_merkleProof",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "whitelistMint",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
   "network": {
     "name": "Base",
+    "chainId": "8453",
     "ankr": "base",
     "os": "https://opensea.io/assets/base",
     "reservoir": "-base",
@@ -43,76 +345,51 @@
     "alt": "base",
     "token": "https://cdn.routescan.io/_next/image?url=https%3a%2f%2fcms-cdn.avascan.com%2fethereum_eb89906e5b.png&w=32&q=100"
   },
-  "contractName": "dinkies",
-  "contractOwner": "0x34A124b036C3963b15948B8e8BE0DFAE05e914ae",
+  "contractName": "CHAMPIONS",
+  "contractOwner": "0x6243a91149a214fC36F107591D0cEcA8464AdBE8",
   "info": {
     "chainId": 8453,
-    "id": "0x3ae78a5fcb9f42f234099f1ca64911e2ce7889f2",
-    "slug": "dinkies",
-    "createdAt": "2024-04-20T08:28:23.871Z",
-    "updatedAt": "2024-04-20T19:45:16.087Z",
-    "name": "dinkies",
-    "symbol": "dnks",
-    "contractDeployedAt": "2024-04-20T08:28:15.000Z",
-    "image": "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZV4atW1H2xn6RoXiHdLWqFb1rTMIZR%2FABSflRjRTaAbW%2BTNZewQT5r8FeFXD1AiJi1aLgQL7pqyEGSEBndlirGx73%2BJ3ujwBzJ%2BUe0r%2Fq6BBMPpTpc28ynCjkvcC14gds%3D?width=250",
+    "id": "0xab89de4ecfc9629c1dc3d4dcb337fab98b16aab5",
+    "slug": "ck-champions",
+    "createdAt": "2024-04-22T11:07:29.582Z",
+    "updatedAt": "2024-04-22T16:37:10.099Z",
+    "name": "CHAMPIONS",
+    "symbol": "CKC",
+    "contractDeployedAt": "2024-04-22T11:07:23.000Z",
+    "image": "https://img.reservoir.tools/images/v2/base/z9JRSpLYGu7%2BCZoKWtAuAGWMlxciEQCESPKStAj21DofnEkfgee1iCk5L0F7v1Pzu603ON2I6AeaaEU07s3vWWgEMyK0pbeUAA28TT%2Fy3GfBkKubiDFkECXM%2FNeVXMfKAW4yYjBk1C7Bea1znbxV8w%3D%3D?width=250",
     "banner": "",
     "twitterUrl": null,
     "discordUrl": "",
     "externalUrl": "",
-    "twitterUsername": "dinkies_",
+    "twitterUsername": "",
     "openseaVerificationStatus": "not_requested",
     "magicedenVerificationStatus": null,
-    "description": "what are dinkies?\n\n \n\n12x12 “dinks” inspired by my obsession with minimizing everything, cryptopunks inspired traits, and doodles eyes.",
+    "description": "",
     "metadataDisabled": false,
     "isSpam": false,
     "isNsfw": false,
     "isMinting": false,
     "sampleImages": [
-      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZV4atW1H2xn6RoXiHdLWqFb1rTMIZR%2FABSflRjRTaAbW%2BTNZewQT5r8FeFXD1AiJi1aLgQL7pqyEGSEBndlirG9ScOIXtgtkWEJdPfnrg4Jw%3D%3D",
-      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZV4atW1H2xn6RoXiHdLWqFb1rTMIZR%2FABSflRjRTaAbW%2BTNZewQT5r8FeFXD1AiJi1aLgQL7pqyEGSEBndlirG9ScOIXtgtkWEJdPfnrg4Jw%3D%3D",
-      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZV4atW1H2xn6RoXiHdLWqFb1rTMIZR%2FABSflRjRTaAbW%2BTNZewQT5r8FeFXD1AiJi1aLgQL7pqyEGSEBndlirG9ScOIXtgtkWEJdPfnrg4Jw%3D%3D",
-      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZV4atW1H2xn6RoXiHdLWqFb1rTMIZR%2FABSflRjRTaAbW%2BTNZewQT5r8FeFXD1AiJi1aLgQL7pqyEGSEBndlirG9ScOIXtgtkWEJdPfnrg4Jw%3D%3D"
+      "https://img.reservoir.tools/images/v2/base/DrROjOH2YYejpYCeeFE4MSZxdjvVKvHNKZIqrTBzYw36WMzLa7NMxJr9OG%2FXCTi%2FciI%2FhK%2Bo53E9nI%2FSFncqc%2BooA9FhxJlbYP%2BH%2Fm5jKOHEoGM%2B6HWgorGC8Ql%2FWw3%2Bu23WOpQnEWopZ5H2JroSBA%3D%3D",
+      "https://img.reservoir.tools/images/v2/base/DrROjOH2YYejpYCeeFE4MSZxdjvVKvHNKZIqrTBzYw36WMzLa7NMxJr9OG%2FXCTi%2FslOtReY8fxoN9B9n3kc8oMrqgQFpZodsrjhiFRAYPM%2FaXeyjfj%2BmPHQHts5n1%2Bwoyz3ijkEFG%2FLI7RzD7wP5ZQ%3D%3D"
     ],
-    "tokenCount": "962",
-    "onSaleCount": "80",
-    "primaryContract": "0x3ae78a5fcb9f42f234099f1ca64911e2ce7889f2",
-    "tokenSetId": "contract:0x3ae78a5fcb9f42f234099f1ca64911e2ce7889f2",
-    "creator": "0x34a124b036c3963b15948b8e8be0dfae05e914ae",
+    "tokenCount": "584",
+    "onSaleCount": "33",
+    "primaryContract": "0xab89de4ecfc9629c1dc3d4dcb337fab98b16aab5",
+    "tokenSetId": "contract:0xab89de4ecfc9629c1dc3d4dcb337fab98b16aab5",
+    "creator": "0x6243a91149a214fc36f107591d0ceca8464adbe8",
     "isSharedContract": false,
     "royalties": {
-      "recipient": "0x34a124b036c3963b15948b8e8be0dfae05e914ae",
-      "breakdown": [
-        {
-          "bps": 500,
-          "recipient": "0x34a124b036c3963b15948b8e8be0dfae05e914ae"
-        }
-      ],
-      "bps": 500
+      "recipient": null,
+      "breakdown": [],
+      "bps": 0
     },
     "allRoyalties": {
-      "eip2981": [
-        {
-          "bps": 500,
-          "recipient": "0x34a124b036c3963b15948b8e8be0dfae05e914ae"
-        }
-      ],
-      "onchain": [
-        {
-          "bps": 500,
-          "recipient": "0x34a124b036c3963b15948b8e8be0dfae05e914ae"
-        }
-      ],
-      "opensea": [
-        {
-          "bps": 500,
-          "required": false,
-          "recipient": "0x34a124b036c3963b15948b8e8be0dfae05e914ae"
-        }
-      ]
+      "opensea": []
     },
     "floorAsk": {
-      "id": "0x46bffa23be407360e350b596f80323bc934bb1bf9aa3d9c3c3227febead4f4ad",
-      "sourceDomain": "opensea.io",
+      "id": "0x0dc0af570908faa8d1c1073c6c5a4ab456bb3916485a17aef22e07ea6d243ff3",
+      "sourceDomain": "mintify.xyz",
       "price": {
         "currency": {
           "contract": "0x0000000000000000000000000000000000000000",
@@ -121,24 +398,24 @@
           "decimals": 18
         },
         "amount": {
-          "raw": "1090000000000000",
-          "decimal": 0.00109,
-          "usd": 3.34159,
-          "native": 0.00109
+          "raw": "14000000000000000",
+          "decimal": 0.014,
+          "usd": 44.13068,
+          "native": 0.014
         }
       },
-      "maker": "0xbac44851587e68495f6bf2f91bd8260234d6bcbb",
-      "validFrom": 1713634883,
-      "validUntil": 1716226761,
+      "maker": "0x1804e7f7cfeba45ea3b06a6587d805c817a5fde8",
+      "validFrom": 1713803718,
+      "validUntil": 1716395775,
       "token": {
-        "contract": "0x3ae78a5fcb9f42f234099f1ca64911e2ce7889f2",
-        "tokenId": "238",
-        "name": "dinky #238",
-        "image": "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZV4atW1H2xn6RoXiHdLWqFb1rTMIZR%2FABSflRjRTaAbW%2BTNZewQT5r8FeFXD1AiJi1aLgQL7pqyEGSEBndlirGsHDdVpjjpOQc41h5mD5CFbR7OT0gRi5dHQLe5q79uH4%3D?width=512"
+        "contract": "0xab89de4ecfc9629c1dc3d4dcb337fab98b16aab5",
+        "tokenId": "496",
+        "name": "Champion Core #496",
+        "image": "https://img.reservoir.tools/images/v2/base/hc%2BnPcLmWxs%2FDW99DlBQ42k40ZoyYV5jCIms5qHjwvvH8%2FeZLFcBXuzVfgSo6uHp6Fu9hsDv%2FtOA5FYN4JoKr8eG7wjJEFe6JiR1yL8GNJRLLCabKVh4YsPz7XRRNMW20qGKOm7DDdP6FIu5bqgTUyS118XqtcEwcZj0atC1nHarcIT%2BkKCTbPYYSs01kOSByAh3ua1tknzlu1nbGaKafg%3D%3D?width=512"
       }
     },
     "topBid": {
-      "id": "0x9b43bb3299bbf4662b375724c050ded85c248061390c29f4cfd655e2032816cb",
+      "id": "0xa9cad46e13fb7ca4c5e2dd1c11c4edb7a58ccaeea18c6090df0d56402b40de0b",
       "sourceDomain": "opensea.io",
       "price": {
         "currency": {
@@ -148,33 +425,33 @@
           "decimals": 18
         },
         "amount": {
-          "raw": "500000000000000",
-          "decimal": 0.0005,
-          "usd": 1.53274,
-          "native": 0.0005
+          "raw": "10100000000000000",
+          "decimal": 0.0101,
+          "usd": 31.87045,
+          "native": 0.0101
         },
         "netAmount": {
-          "raw": "487500000000000",
-          "decimal": 0.00049,
-          "usd": 1.49442,
-          "native": 0.00049
+          "raw": "9847500000000000",
+          "decimal": 0.00985,
+          "usd": 31.07369,
+          "native": 0.00985
         }
       },
-      "maker": "0xeeabdc0a008cf9450faa1ecdd5948987ec75ac86",
-      "validFrom": 1713639825,
-      "validUntil": 1714244614
+      "maker": "0xd9afac6b4d8937c1e90a35d9595c716fd53b7a31",
+      "validFrom": 1713802639,
+      "validUntil": 1714407424
     },
     "rank": {
-      "1day": 95,
+      "1day": 43,
       "7day": null,
       "30day": null,
       "allTime": null
     },
     "volume": {
-      "1day": 0.07906,
-      "7day": 0.07906,
-      "30day": 0.07906,
-      "allTime": 0.07906
+      "1day": 0.44,
+      "7day": 0.44,
+      "30day": 0.44,
+      "allTime": 0.44
     },
     "volumeChange": {
       "1day": null,
@@ -182,19 +459,19 @@
       "30day": null
     },
     "floorSale": {
-      "1day": 0.0001,
+      "1day": 0.0083,
       "7day": null,
       "30day": null
     },
     "floorSaleChange": {
-      "1day": 10.9,
+      "1day": 1.6867469879518073,
       "7day": null,
       "30day": null
     },
     "collectionBidSupported": true,
-    "ownerCount": 399,
+    "ownerCount": 266,
     "contractKind": "erc721",
-    "mintedTimestamp": 1713602009,
+    "mintedTimestamp": 1713784153,
     "mintStages": []
   }
 }
