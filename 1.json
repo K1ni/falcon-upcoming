@@ -1,5 +1,5 @@
 {
-  "name": "ape",
+  "name": "PunkApepen",
   "timestamp":1713952800,
   "contractAddress": "0xf39be779905d16fe23b2cc1297dc3e759d2daa11",
   "task": {
@@ -433,8 +433,8 @@
     "image": "https://img.reservoir.tools/images/v2/base/z9JRSpLYGu7%2BCZoKWtAuAEaPekw4eyhAp5W%2FhuiJBJ%2BpTd9gln74Wp8Z901kcWNyo1nFvjkMrLVng6p9LfwChADRw36fl95DDUOgquwXcbJGu4cbF7JHgnf2StCKiru7kgClg56HrCWJxybzHA2rHw%3D%3D?width=250",
     "banner": "",
     "twitterUrl": null,
-    "discordUrl": "",
-    "externalUrl": "",
+    "discordUrl": "https://discord.gg/7ZNBHpFKmK",
+    "externalUrl": "https://punkapepen.com/",
     "twitterUsername": "punkapepen",
     "openseaVerificationStatus": "not_requested",
     "magicedenVerificationStatus": null,
