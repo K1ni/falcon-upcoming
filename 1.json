@@ -1,17 +1,23 @@
 {
-  "name": "Blastoadz",
-  "timestamp":1715443200,
-  "contractAddress": "0x990086aF37AfF0c3641d2A7675fc558E68427F2D",
+  "name": "kukang",
+  "timestamp":1715641200,
+  "contractAddress": "0xcc714a1b69a352a39be746ab16744c57d5a17deb",
   "task": {
       "txCount": "1",
-      "value": "0.05",
-      "hex": "0x1249c58b",
+      "value": "0",
       "isHex": false,
-      "isAutoGasLimit": true,
-      "isSimulate": true,
+      "isAutoGasLimit": false,
+      "isSimulate": false,
       "selectedFunction": "mint",
-      "functionInputs": {},
-      "contractAddress": "0x990086aF37AfF0c3641d2A7675fc558E68427F2D"
+      "functionInputs": {
+        "qty": "1",
+        "proof": "[]",
+        "timestamp": "0",
+        "signature": "0x"
+      },
+      "contractAddress": "0xcc714a1b69a352a39be746ab16744c57d5a17deb",
+      "gasLimit": "160000"
+    
   },
   "abi": [
     {
@@ -35,45 +41,59 @@
     {
       "inputs": [
         {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
+          "internalType": "uint32",
+          "name": "qty",
+          "type": "uint32"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "proof",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint64",
+          "name": "timestamp",
+          "type": "uint64"
+        },
+        {
+          "internalType": "bytes",
+          "name": "signature",
+          "type": "bytes"
         }
       ],
-      "name": "burn",
+      "name": "crossmint",
       "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "claimGas",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "claimYield",
-      "outputs": [],
-      "stateMutability": "nonpayable",
+      "stateMutability": "payable",
       "type": "function"
     },
     {
       "inputs": [
         {
-          "internalType": "address",
-          "name": "_governor",
-          "type": "address"
+          "internalType": "uint32",
+          "name": "qty",
+          "type": "uint32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "proof",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint64",
+          "name": "timestamp",
+          "type": "uint64"
+        },
+        {
+          "internalType": "bytes",
+          "name": "signature",
+          "type": "bytes"
         }
       ],
-      "name": "configureGovernor",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
       "name": "mint",
       "outputs": [],
       "stateMutability": "payable",
@@ -82,32 +102,52 @@
     {
       "inputs": [
         {
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
+          "internalType": "uint32",
+          "name": "qty",
+          "type": "uint32"
         },
         {
-          "internalType": "uint256",
-          "name": "quantity",
-          "type": "uint256"
-        }
-      ],
-      "name": "ownerMintTo",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
+          "internalType": "uint32",
+          "name": "limit",
+          "type": "uint32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "proof",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint64",
+          "name": "timestamp",
+          "type": "uint64"
+        },
         {
           "internalType": "bytes",
           "name": "signature",
           "type": "bytes"
         }
       ],
-      "name": "preMint",
+      "name": "mintWithLimit",
       "outputs": [],
       "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "qty",
+          "type": "uint32"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "ownerMint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -202,12 +242,12 @@
     {
       "inputs": [
         {
-          "internalType": "address",
-          "name": "_pointsOperator",
-          "type": "address"
+          "internalType": "string",
+          "name": "uri",
+          "type": "string"
         }
       ],
-      "name": "setPointsOperator",
+      "name": "setContractURI",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -216,11 +256,42 @@
       "inputs": [
         {
           "internalType": "address",
-          "name": "_preMintSignerAddress",
+          "name": "cosigner",
           "type": "address"
         }
       ],
-      "name": "setPreMintSignerAddress",
+      "name": "setCosigner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "crossmintAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setCrossmintAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "uint96",
+          "name": "feeNumerator",
+          "type": "uint96"
+        }
+      ],
+      "name": "setDefaultRoyalty",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -229,11 +300,11 @@
       "inputs": [
         {
           "internalType": "uint256",
-          "name": "_price",
+          "name": "globalWalletLimit",
           "type": "uint256"
         }
       ],
-      "name": "setPrice",
+      "name": "setGlobalWalletLimit",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -242,11 +313,140 @@
       "inputs": [
         {
           "internalType": "uint256",
-          "name": "_royaltiesBps",
+          "name": "maxMintableSupply",
           "type": "uint256"
         }
       ],
-      "name": "setRoyaltiesBps",
+      "name": "setMaxMintableSupply",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "mintable",
+          "type": "bool"
+        }
+      ],
+      "name": "setMintable",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint80",
+              "name": "price",
+              "type": "uint80"
+            },
+            {
+              "internalType": "uint32",
+              "name": "walletLimit",
+              "type": "uint32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "merkleRoot",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint24",
+              "name": "maxStageSupply",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint64",
+              "name": "startTimeUnixSeconds",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "endTimeUnixSeconds",
+              "type": "uint64"
+            }
+          ],
+          "internalType": "struct IERC721M.MintStageInfo[]",
+          "name": "newStages",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "setStages",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "expiry",
+          "type": "uint64"
+        }
+      ],
+      "name": "setTimestampExpirySeconds",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "enum TransferSecurityLevels",
+          "name": "level",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint120",
+          "name": "operatorWhitelistId",
+          "type": "uint120"
+        },
+        {
+          "internalType": "uint120",
+          "name": "permittedContractReceiversAllowlistId",
+          "type": "uint120"
+        }
+      ],
+      "name": "setToCustomSecurityPolicy",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "validator",
+          "type": "address"
+        },
+        {
+          "internalType": "enum TransferSecurityLevels",
+          "name": "level",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint120",
+          "name": "operatorWhitelistId",
+          "type": "uint120"
+        },
+        {
+          "internalType": "uint120",
+          "name": "permittedContractReceiversAllowlistId",
+          "type": "uint120"
+        }
+      ],
+      "name": "setToCustomValidatorAndSecurityPolicy",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "setToDefaultSecurityPolicy",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -257,9 +457,19 @@
           "internalType": "uint256",
           "name": "tokenId",
           "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "uint96",
+          "name": "feeNumerator",
+          "type": "uint96"
         }
       ],
-      "name": "stakeToad",
+      "name": "setTokenRoyalty",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -267,40 +477,25 @@
     {
       "inputs": [
         {
-          "internalType": "uint256[]",
-          "name": "tokenIds",
-          "type": "uint256[]"
+          "internalType": "string",
+          "name": "suffix",
+          "type": "string"
         }
       ],
-      "name": "stakeToadz",
+      "name": "setTokenURISuffix",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "inputs": [],
-      "name": "toggleBurningActive",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "toggleMintActive",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "togglePreMintActive",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "toggleStakingActive",
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "transferValidator_",
+          "type": "address"
+        }
+      ],
+      "name": "setTransferValidator",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -342,39 +537,7 @@
       "type": "function"
     },
     {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "unstakeToad",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256[]",
-          "name": "tokenIds",
-          "type": "uint256[]"
-        }
-      ],
-      "name": "unstakeToadz",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_balance",
-          "type": "uint256"
-        }
-      ],
+      "inputs": [],
       "name": "withdraw",
       "outputs": [],
       "stateMutability": "nonpayable",
@@ -382,41 +545,41 @@
     },
     {
       "inputs": [],
-      "name": "withdrawAll",
+      "name": "withdrawERC20",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
   "network": {
-    "name": "Blast",
-    "chainId": "81457",
-    "ankr": "blast",
-    "os": "https://opensea.io/assets/blast",
-    "reservoir": "-blast",
-    "scanapi": "https://api.blastscan.io/",
-    "scan": "https://blastscan.io/",
-    "image": "https://cdn.routescan.io/_next/image?url=https%3A%2F%2Fcms-cdn.avascan.com%2Fcms2%2Fblast.dead36673539.png&w=32&q=100",
-    "alt": "bst",
+    "name": "Base",
+    "chainId": "8453",
+    "ankr": "base",
+    "os": "https://opensea.io/assets/base",
+    "reservoir": "-base",
+    "scanapi": "https://api.basescan.org/",
+    "scan": "https://basescan.org/",
+    "image": "https://cdn.routescan.io/_next/image?url=https%3A%2F%2Fcms-cdn.avascan.com%2Fcms2%2Fbase-logo-in-blue.eff264310cb2.png&w=32&q=100",
+    "alt": "base",
     "token": "https://cdn.routescan.io/_next/image?url=https%3a%2f%2fcms-cdn.avascan.com%2fethereum_eb89906e5b.png&w=32&q=100"
   },
-  "contractOwner": "0x3eC815eC70fE88CbE37fFD4794dCdC240383EB1A",
-  "contractName": "Blastoadz",
+  "contractName": "KUKANG",
+  "contractOwner": "0x997BC40D116AFD347B3F2d61A16C9B7f74650E64",
   "info": {
-    "chainId": 81457,
-    "id": "0x990086af37aff0c3641d2a7675fc558e68427f2d",
-    "slug": "blastoadz",
-    "createdAt": "2024-05-11T03:21:07.690Z",
-    "updatedAt": "2024-05-11T09:51:30.695Z",
-    "name": "Blastoadz",
-    "symbol": "BLASTOADZ",
-    "contractDeployedAt": "2024-05-11T03:21:01.000Z",
-    "image": "https://img.reservoir.tools/images/v2/blast/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYzmWtdHmTgiRaeWX6M1Ce40Q7vn28KJrrPicEz5cjvxluHPO93IoTr%2FG6kAbVVl9W3sw8MesjVj0RN1pWB1ROiCXsNN%2Fulh9mawZT7Y6oQ3k0XFvSNhKP2xTjqtYkEvZU%3D?width=250",
+    "chainId": 8453,
+    "id": "0xcc714a1b69a352a39be746ab16744c57d5a17deb",
+    "slug": "kukang-3",
+    "createdAt": "2024-05-12T22:07:55.642Z",
+    "updatedAt": "2024-05-13T20:39:19.189Z",
+    "name": "KUKANG",
+    "symbol": "kukang",
+    "contractDeployedAt": "2024-05-12T22:07:49.000Z",
+    "image": "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYpbMyjLW1aPk6Gl5uryGiTh%2BIe58JcOl8BvgReP8B6CGkHcz45g76MmQwvs%2FTzEjfFovyImNsHAU6IC8hZNlIY9tjHSvEHFqqcFoG3oPa7eCaiKuOvhzo1RfgF57cWJZU%3D?width=250",
     "banner": "",
     "twitterUrl": null,
     "discordUrl": "",
-    "externalUrl": "https://blastoadz.io/",
-    "twitterUsername": "blastoadz",
+    "externalUrl": "",
+    "twitterUsername": "",
     "openseaVerificationStatus": "not_requested",
     "magicedenVerificationStatus": null,
     "description": "",
@@ -425,50 +588,50 @@
     "isNsfw": false,
     "isMinting": false,
     "sampleImages": [
-      "https://img.reservoir.tools/images/v2/blast/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYzmWtdHmTgiRaeWX6M1Ce40Q7vn28KJrrPicEz5cjvxluHPO93IoTr%2FG6kAbVVl9W3sw8MesjVj0RN1pWB1ROizkJuupCMnbIKwLShQfDrWA%3D%3D",
-      "https://img.reservoir.tools/images/v2/blast/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYzmWtdHmTgiRaeWX6M1Ce40Q7vn28KJrrPicEz5cjvxluHPO93IoTr%2FG6kAbVVl9W3sw8MesjVj0RN1pWB1ROizkJuupCMnbIKwLShQfDrWA%3D%3D",
-      "https://img.reservoir.tools/images/v2/blast/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYzmWtdHmTgiRaeWX6M1Ce40Q7vn28KJrrPicEz5cjvxluHPO93IoTr%2FG6kAbVVl9W3sw8MesjVj0RN1pWB1ROizkJuupCMnbIKwLShQfDrWA%3D%3D",
-      "https://img.reservoir.tools/images/v2/blast/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYzmWtdHmTgiRaeWX6M1Ce40Q7vn28KJrrPicEz5cjvxluHPO93IoTr%2FG6kAbVVl9W3sw8MesjVj0RN1pWB1ROizkJuupCMnbIKwLShQfDrWA%3D%3D"
+      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYpbMyjLW1aPk6Gl5uryGiTh%2BIe58JcOl8BvgReP8B6CGkHcz45g76MmQwvs%2FTzEjfFovyImNsHAU6IC8hZNlIY1%2Bt1Ck8sY%2B6be8Sq2IQCtQ%3D%3D",
+      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYpbMyjLW1aPk6Gl5uryGiTh%2BIe58JcOl8BvgReP8B6CGkHcz45g76MmQwvs%2FTzEjfFovyImNsHAU6IC8hZNlIY1%2Bt1Ck8sY%2B6be8Sq2IQCtQ%3D%3D",
+      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYpbMyjLW1aPk6Gl5uryGiTh%2BIe58JcOl8BvgReP8B6CGkHcz45g76MmQwvs%2FTzEjfFovyImNsHAU6IC8hZNlIY1%2Bt1Ck8sY%2B6be8Sq2IQCtQ%3D%3D",
+      "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYpbMyjLW1aPk6Gl5uryGiTh%2BIe58JcOl8BvgReP8B6CGkHcz45g76MmQwvs%2FTzEjfFovyImNsHAU6IC8hZNlIY1%2Bt1Ck8sY%2B6be8Sq2IQCtQ%3D%3D"
     ],
-    "tokenCount": "805",
-    "onSaleCount": "33",
-    "primaryContract": "0x990086af37aff0c3641d2a7675fc558e68427f2d",
-    "tokenSetId": "contract:0x990086af37aff0c3641d2a7675fc558e68427f2d",
-    "creator": "0xbe4bb1289f50176b1d4356fcf68a086af511531d",
+    "tokenCount": "217",
+    "onSaleCount": "22",
+    "primaryContract": "0xcc714a1b69a352a39be746ab16744c57d5a17deb",
+    "tokenSetId": "contract:0xcc714a1b69a352a39be746ab16744c57d5a17deb",
+    "creator": "0x997bc40d116afd347b3f2d61a16c9b7f74650e64",
     "isSharedContract": false,
     "royalties": {
-      "recipient": "0xbe4bb1289f50176b1d4356fcf68a086af511531d",
+      "recipient": "0x7a0d188c06a511f991868ed4edb0254eeb3f5b99",
       "breakdown": [
         {
-          "bps": 500,
-          "recipient": "0xbe4bb1289f50176b1d4356fcf68a086af511531d"
+          "bps": 690,
+          "recipient": "0x7a0d188c06a511f991868ed4edb0254eeb3f5b99"
         }
       ],
-      "bps": 500
+      "bps": 690
     },
     "allRoyalties": {
       "eip2981": [
         {
-          "bps": 500,
-          "recipient": "0xbe4bb1289f50176b1d4356fcf68a086af511531d"
+          "bps": 690,
+          "recipient": "0x7a0d188c06a511f991868ed4edb0254eeb3f5b99"
         }
       ],
       "onchain": [
         {
-          "bps": 500,
-          "recipient": "0xbe4bb1289f50176b1d4356fcf68a086af511531d"
+          "bps": 690,
+          "recipient": "0x7a0d188c06a511f991868ed4edb0254eeb3f5b99"
         }
       ],
       "opensea": [
         {
-          "bps": 500,
+          "bps": 690,
           "required": false,
-          "recipient": "0xbe4bb1289f50176b1d4356fcf68a086af511531d"
+          "recipient": "0x7a0d188c06a511f991868ed4edb0254eeb3f5b99"
         }
       ]
     },
     "floorAsk": {
-      "id": "0x6f083f10a2f2ef64000cc6c3b04cf9c7c694f91952812286f565a76414f23a62",
+      "id": "0x6c9da28ecc0610122441534a8268bcc82314bff900d32cbb1f4fe68cbf75dabf",
       "sourceDomain": "opensea.io",
       "price": {
         "currency": {
@@ -478,60 +641,60 @@
           "decimals": 18
         },
         "amount": {
-          "raw": "68900000000000000",
-          "decimal": 0.0689,
-          "usd": 209.34195,
-          "native": 0.0689
+          "raw": "8000000000000000",
+          "decimal": 0.008,
+          "usd": 23.45049,
+          "native": 0.008
         }
       },
-      "maker": "0x754410ef8bfdaa97afec0aadfa4afd4dbafaaa63",
-      "validFrom": 1715418040,
-      "validUntil": 1718096440,
+      "maker": "0x06f3d85fa1c981af29438b4588e78d0a84f4a378",
+      "validFrom": 1715632400,
+      "validUntil": 1718310800,
       "token": {
-        "contract": "0x990086af37aff0c3641d2a7675fc558e68427f2d",
-        "tokenId": "737",
-        "name": "Blastoad #737",
-        "image": "https://img.reservoir.tools/images/v2/blast/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYzmWtdHmTgiRaeWX6M1Ce40Q7vn28KJrrPicEz5cjvxluHPO93IoTr%2FG6kAbVVl9W3sw8MesjVj0RN1pWB1ROi40HQg5aNKi53LnzavRryQ2riMQVLLco2XppiA%2FvhbJM%3D?width=512"
+        "contract": "0xcc714a1b69a352a39be746ab16744c57d5a17deb",
+        "tokenId": "206",
+        "name": "LORIS #206",
+        "image": "https://img.reservoir.tools/images/v2/base/7%2FrdF%2Fe%2F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCYpbMyjLW1aPk6Gl5uryGiTh%2BIe58JcOl8BvgReP8B6CGkHcz45g76MmQwvs%2FTzEjfFovyImNsHAU6IC8hZNlIYkRO8Ufrcmb%2BRcZXcbD%2FLLlU577H7v0%2BzgiF4%2BwskXYM%3D?width=512"
       }
     },
     "topBid": {
-      "id": "0x5b9a3e2ef5e0e662a86ca296505ef7eb66a8a68abfaa533e58f53157637b74e8",
-      "sourceDomain": "opensea.io",
+      "id": "0xdf7e5372071e2e88605d408c021491a1ec5a8f1c73f9681f62c69c4cbef7c39c",
+      "sourceDomain": "magiceden.io",
       "price": {
         "currency": {
-          "contract": "0x4300000000000000000000000000000000000004",
+          "contract": "0x4200000000000000000000000000000000000006",
           "name": "Wrapped Ether",
           "symbol": "WETH",
           "decimals": 18
         },
         "amount": {
-          "raw": "55000000000000000",
-          "decimal": 0.055,
-          "usd": 167.11557,
-          "native": 0.055
+          "raw": "3300000000000000",
+          "decimal": 0.0033,
+          "usd": 9.6778,
+          "native": 0.0033
         },
         "netAmount": {
-          "raw": "53625000000000000",
-          "decimal": 0.05362,
-          "usd": 162.93768,
-          "native": 0.05362
+          "raw": "3055800000000000",
+          "decimal": 0.00306,
+          "usd": 8.96165,
+          "native": 0.00306
         }
       },
-      "maker": "0x8143aad694567424162a949c1580c91d03437858",
-      "validFrom": 1715412549,
-      "validUntil": 1716017336
+      "maker": "0x3adb91a604ce6d922f538dca605f49b77a0f4c81",
+      "validFrom": 1715630502,
+      "validUntil": 1718308860
     },
     "rank": {
-      "1day": 30,
+      "1day": null,
       "7day": null,
       "30day": null,
       "allTime": null
     },
     "volume": {
-      "1day": 6.501,
-      "7day": 6.501,
-      "30day": 6.501,
-      "allTime": 6.501
+      "1day": 0,
+      "7day": 0,
+      "30day": 0,
+      "allTime": 0
     },
     "volumeChange": {
       "1day": null,
@@ -539,19 +702,23 @@
       "30day": null
     },
     "floorSale": {
-      "1day": 0.0499,
+      "1day": null,
       "7day": null,
       "30day": null
     },
     "floorSaleChange": {
-      "1day": 1.3807615230460921,
+      "1day": null,
       "7day": null,
       "30day": null
     },
     "collectionBidSupported": true,
-    "ownerCount": 595,
+    "ownerCount": 141,
     "contractKind": "erc721",
-    "mintedTimestamp": 1715398293,
+    "mintedTimestamp": 1715567113,
     "mintStages": []
+  },
+  "monitor": {
+    "mode": "timestamp",
+    "timestamp": "1715641200"
   }
 }
